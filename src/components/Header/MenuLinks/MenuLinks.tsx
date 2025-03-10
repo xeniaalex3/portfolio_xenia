@@ -1,37 +1,17 @@
-import Link from "next/link";
-import { MenuLinksProps } from "@/@types/menuLinks";
+import Link from 'next/link'
+import { MenuLinksProps } from '@/@types/menuLinks'
 
-function MenuLinks({ path, name, focus, isOpen, pathname, id }: MenuLinksProps) {
-  const newFocus = !!(!isOpen && pathname?.split("/")?.[1] === id);
-
+function MenuLinks({ path, name, pathname, id, focus }: MenuLinksProps) {
+  const newFocus = !!(pathname?.split("/")?.[1] === id);
   return (
-    <div className="relative group/edit z-[1000]">
+    <div className="flex flex-row">
       <Link href={path}>
-        <li
-          className={`flex items-center py-2 my-2 hover:text-persian-blue-700 text-manatee-600 mb-[0.5rem] ${
-            focus || newFocus ? "text-persian-blue-700" : ""
-          }`}
-        >
-          <p
-            className={`transition duration-300 ease-in-out text-sm ${
-              focus || newFocus ? "text-persian-blue-700" : ""
-            } ${isOpen ? "ml-2" : "w-0 hidden"}`}
-          >
-            {name}
-          </p>
-          {(focus || newFocus) && (
-            <div
-              className={`absolute top-2 w-0.5 h-6 bg-persian-blue-700 rounded-full transition duration-300 ease-in-out sm:hidden ${
-                isOpen ? "right-[-17px]" : "right-[-16px]"
-              }`}
-            ></div>
-          )}
+        <li className={`flex hover:text-[var(--text-primary)] text-[var(--text-secondary)] ${focus || newFocus ? "text-[var(--text-primary)]" : ""}`}>
+          <p className={`transition duration-300 ease-in-out text-sm ${focus || newFocus ? "text-[var(--text-primary)]" : ""}`}>{name}</p>
         </li>
       </Link>
-
-
     </div>
-  );
+  )
 }
 
-export default MenuLinks;
+export default MenuLinks

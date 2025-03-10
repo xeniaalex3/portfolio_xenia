@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import '@/styles/reset.css';
+// import '@/styles/reset.css';
 import "@/styles/global.css";
 
 // metadata
@@ -16,8 +16,8 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body suppressHydrationWarning={true}>
-        <div className="flex w-full bg-[var(--surface-background)]">
-          <main className="h-screen w-full overflow-auto">{children}</main>
+        <div className="flex flex-col bg-[var(--surface-background)]">
+          <main>{children}</main>
         </div>
       </body>
     </html>

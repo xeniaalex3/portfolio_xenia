@@ -8,10 +8,10 @@ function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="flex flex-row justify-between items-center h-[3.5rem] mb-4 overflow-hidden px-6 border-b border-[var(--surface-secondary)] shadow-lg">
-      <h1 className="flex justify-center items-center">
+    <header className="flex flex-row justify-between items-center h-[3.5rem] mb-4 overflow-hidden px-28 border-b border-[var(--surface-secondary)] shadow-lg">
+      <h2 className="flex justify-center items-center">
         XeniaDev
-      </h1>
+      </h2>
       <nav className="flex flex-row justify-end items-center gap-4 flex-1 max-w-2">
         {menuItems.map(item => (
           <MenuLinks

@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@import 'tailwindcss/utilities';
 
 :root {
   --primary-color: #8a42db;
@@ -11,6 +12,8 @@
 
   --text-primary: #f5f6f6;
   --text-secondary: #cdd0d4;
+  --font-primary: 'Heebo', sans-serif;
+  --font-secondary: 'Kalam', cursive;
 }
 
 @theme inline {
@@ -28,20 +31,35 @@
 body {
   background: var(--surface-background);
   color: var(--text-primary);
-  font-family: 'Heebo', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
-/* h1 {
+h1 {
+  /* font-family: "Indie Flower", cursive; */
+  font-family: 'Caveat', cursive;
   font-size: 32px;
   font-weight: 400;
+  font-style: normal;
 }
 
-h2{
-  font-size: 24px;
-  font-weight: 400;
+@keyframes orbit {
+  from {
+    transform: rotate(calc(var(--angle) * 1deg))
+      translateY(calc(var(--radius) * 1px)) rotate(calc(var(--angle) * -1deg));
+  }
+  to {
+    transform: rotate(calc(var(--angle) * 1deg + 360deg))
+      translateY(calc(var(--radius) * 1px))
+      rotate(calc((var(--angle) * -1deg) - 360deg));
+  }
 }
 
-p{
-  font-size: 16px;
-  font-weight: 400;
-} */
+@layer utilities {
+  .animate-orbit {
+    animation: orbit calc(var(--duration) * 1s) linear infinite;
+  }
+
+  .animate-orbit-reverse {
+    animation-direction: reverse !important;
+  }
+}

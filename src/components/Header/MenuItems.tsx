@@ -6,6 +6,11 @@ export const menuItems = [
     id: "about",
   },
   {
+    name: "Skills",
+    path: "/skills",
+    id: "skills",
+  },
+  {
     name: "Projects",
     path: "/projects",
     id: "projects",

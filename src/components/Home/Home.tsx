@@ -13,7 +13,7 @@ function Home(){
   return(
     <section className="flex flex-row justify-center items-center gap-[25rem] mt-14">
       <div className="">
-        <h1 className="text-2xl font-[var(--font-secondary)] bg-linear-65 from-[var(--primary-color)] to-[var(--secondary-color)] inline-block text-transparent bg-clip-text">Hi, I&apos;m Xenia</h1>
+        <h1 className="font-semibold text-4xl bg-linear-65 from-[var(--primary-color)] to-[var(--secondary-color)] inline-block text-transparent bg-clip-text">Hi, I&apos;m Xenia</h1>
       </div>
       <div className="relative flex px-20 lg:h-[500px] h-[330px] w-[400px]  flex-col items-center justify-center overflow-hidden ">
             <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300 bg-clip-text text-center lg:text-5xl text-5xl font-semibold leading-none text-transparent dark:from-white dark:to-black">

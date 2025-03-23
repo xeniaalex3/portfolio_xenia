@@ -8,7 +8,7 @@ function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="flex flex-row justify-between items-center h-[3.5rem] mb-4 overflow-hidden px-28 border-b border-[var(--surface-secondary)] shadow-lg">
+    <header className="flex flex-row justify-around items-center h-[3.5rem] mb-4 overflow-hidden border-b border-[var(--surface-secondary)] shadow-lg">
       <h2 className="flex justify-center items-center">
         XeniaDev
       </h2>

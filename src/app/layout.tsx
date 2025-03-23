@@ -1,6 +1,6 @@
-import type { Metadata } from 'next';
-// import '@/styles/reset.css';
-import "@/styles/global.css";
+import type { Metadata } from 'next'
+import { ThemeProvider } from '@/context/ThemeContext'
+import '@/styles/global.css'
 
 // metadata
 export const metadata: Metadata = {
@@ -16,9 +16,11 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body suppressHydrationWarning={true}>
-        <div className="flex flex-col bg-[var(--surface-background)]">
-          <main>{children}</main>
-        </div>
+        <ThemeProvider>
+          <div className="flex flex-col bg-[var(--surface-background)]">
+            <main>{children}</main>
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   )

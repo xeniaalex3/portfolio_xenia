@@ -1,5 +1,5 @@
 "use client";
-import { OrbitingCircles } from "../ui/orbiting-circules";
+import { OrbitingCircles } from "../ui/Orbiting/Orbiting-circules";
 import { BiLogoTypescript } from "react-icons/bi";
 import { DiCss3 } from "react-icons/di";
 import {

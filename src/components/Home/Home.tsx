@@ -26,7 +26,7 @@ function Home(){
               <FaReact className="text-sky-500 lg:text-8xl text-3xl" />
               <SiNestjs className="dark:text-red-500 text-red-500 lg:text-8xl text-3xl" />
               <SiTailwindcss className="text-cyan-500 lg:text-8xl text-3xl" />
-              <SiNextdotjs className="dark:text-slate-50 text-slate-900 lg:text-8xl text-3xl" />
+              <SiNextdotjs className="text-[var(--text-primary)] lg:text-8xl text-3xl" />
               <SiMui className="text-sky-600 lg:text-8xl text-3xl" />
               <RiJavascriptFill className="text-yellow-500 lg:text-8xl text-3xl" />
             </OrbitingCircles>
@@ -38,7 +38,7 @@ function Home(){
               <RiJavascriptFill className="text-yellow-500 lg:text-8xl text-3xl" />
               <FaNode className="text-lime-500 lg:text-8xl text-3xl" />
               <DiCss3 className="dark:text-sky-500 text-sky-500 lg:text-8xl text-3xl" />
-              <SiNextdotjs className="dark:text-slate-50 text-slate-900 lg:text-8xl text-3xl" />
+              <SiNextdotjs className="text-[var(--text-primary)] lg:text-8xl text-3xl" />
               <SiTailwindcss className="text-cyan-500 lg:text-8xl text-3xl" />
             </OrbitingCircles>
           </div>

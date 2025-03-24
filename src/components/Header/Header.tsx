@@ -9,7 +9,7 @@ function Header() {
   const pathname = usePathname()
 
   return (
-    <header className="flex flex-row justify-around items-center h-[3.5rem] mb-4 overflow-hidden border-b border-[var(--surface-secondary)] shadow-lg">
+    <header className="flex flex-row justify-around items-center h-[3.5rem] mb-4 overflow-hidden border-b border-transparent shadow-[var(--shadow-custom)]">
       <h2 className="flex justify-center items-center">XeniaDev</h2>
       <nav className="flex flex-row justify-end items-center gap-4">
         {menuItems.map(item => (
@@ -23,9 +23,8 @@ function Header() {
           />
         ))}
 
-<ModeToggle />  
+        <ModeToggle />
       </nav>
-      
     </header>
   )
 }

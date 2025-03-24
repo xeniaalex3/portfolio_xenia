@@ -17,6 +17,7 @@
 
   --text-primary: #525252;
   --text-secondary: #464646;
+  --text-base: #f5f6f6;
   --font-primary: 'Noto Sans', sans-serif;
   --circle-stroke: #dcdcdc;
 }
@@ -37,6 +38,7 @@
 
   --text-primary: #f5f6f6;
   --text-secondary: #cdd0d4;
+  --text-base: #f5f6f6;
   --font-primary: 'Noto Sans', sans-serif;
   --circle-stroke: #ffffff1a;
 }

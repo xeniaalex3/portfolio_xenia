@@ -8,17 +8,34 @@ import {
 } from "react-icons/fa6";
 import { RiJavascriptFill, RiHtml5Fill } from "react-icons/ri";
 import { SiNextdotjs, SiTailwindcss, SiMui, SiNestjs } from "react-icons/si";
+import { GoArrowRight } from "react-icons/go";
 import SparklesText from "@/components/ui/Sparkles/SparklesText";
+import CustomButton from "../ui/Form/Button/CustomButton";
+import { useRouter } from 'next/navigation';
 
 function Home(){
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push('/contact');
+  };
+
+
   return(
     <section className="flex flex-row justify-center items-center gap-[21rem] mt-14">
       <div className="w-[35rem]">
         <h1 className="font-semibold text-4xl bg-linear-65 from-[var(--primary-color)] to-[var(--secondary-color)] inline-block text-transparent bg-clip-text mb-4">Hi, I&apos;m Xenia</h1>
         <h2 className="text-[var(--text-primary)] font-medium mb-4 text-lg">I&apos;m a <span className="text-[var(--primary-color)]">Front-End Developer</span> specializing in building modern, fast, and responsive web applications.</h2>
         <p className="text-[var(--text-secondary)] text-base font-normal">I work with React.js, TypeScript, Next.js, and Tailwind CSS to create sleek and user-friendly digital experiences.</p>
-        {/* <p className="text-[var(--text-secondary)] text-base font-normal">Let&apos;s build something amazing together !</p> */}
         <SparklesText className="text-[var(--text-secondary)] text-base font-normal mt-3" text="Let&apos;s build something amazing together !" />
+        <CustomButton 
+        type="button"
+        text="Get in touch"
+        color="violet"
+        icon={<GoArrowRight className="ml-2 fill-slate-50"/>}
+        customCss="!w-[10rem] mt-6 text-slate-50"
+        onClick={handleClick}
+        />
       </div>
       <div className="relative flex px-20 lg:h-[500px] h-[330px] w-[400px]  flex-col items-center justify-center overflow-hidden ">
             <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300 bg-clip-text text-center lg:text-5xl text-5xl font-semibold leading-none text-transparent dark:from-white dark:to-black">

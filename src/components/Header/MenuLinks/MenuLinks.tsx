@@ -7,7 +7,7 @@ function MenuLinks({ path, name, pathname, id, focus }: MenuLinksProps) {
     <div className="flex flex-row">
       <Link href={path}>
         <li className={`flex hover:text-[var(--primary-color)] text-[var(--text-secondary)] ${focus || newFocus ? "text-[var(--primary-color)]" : ""}`}>
-          <p className={`transition duration-300 ease-in-out text-base ${focus || newFocus ? "text-[var(--primary-color)]" : ""}`}>{name}</p>
+          <p className={`transition duration-300 ease-in-out text-base font-medium ${focus || newFocus ? "text-[var(--primary-color)]" : ""}`}>{name}</p>
         </li>
       </Link>
     </div>

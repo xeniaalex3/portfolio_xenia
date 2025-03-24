@@ -60,8 +60,8 @@ function CustomButton({
       onClick={onClick}
       onSubmit={onSubmit}
     >
-      {icon && <span>{icon}</span>}
       {text}
+      {icon && <span>{icon}</span>}
     </button>
   );
 }

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 function About() {
   return (
-    <section className="w-[83rem] h-[27rem] bg-[var(--surface-primary)] mx-auto mt-[13rem] mb-[7rem] flex items-center justify-between" id="about">
+    <section className="w-[83rem] h-[27rem] bg-[var(--surface-primary)] mx-auto mt-[13rem] mb-[7rem] flex items-center justify-between shadow-lg rounded-lg" id="about">
       <div className="flex justify-center w-2/5">
         <Image src="/image-about.svg" alt="image in section about" width={330} height={330}/>
       </div>

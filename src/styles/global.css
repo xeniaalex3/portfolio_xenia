@@ -3,7 +3,7 @@
 
 .light {
   --primary-color: #8a42db;
-  --secondary-color: #7dffaf;
+  --secondary-color: #09de5c;
 
   --hover-primary-color: #7530c0;
   --hover-secondary-color: #09de5c;
@@ -73,6 +73,7 @@ body {
   }
 }
 
+
 @layer utilities {
   .animate-orbit {
     animation: orbit calc(var(--duration) * 1s) linear infinite;
@@ -81,4 +82,5 @@ body {
   .animate-orbit-reverse {
     animation-direction: reverse !important;
   }
+
 }

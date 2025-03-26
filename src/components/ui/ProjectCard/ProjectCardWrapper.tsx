@@ -5,12 +5,12 @@ import { StaticImageData } from "next/image";
 import { IoLogoGithub } from "react-icons/io";
 import { RiShareBoxFill } from 'react-icons/ri'
 
-function ProjectCardWrapper({ title, image, width, height}: ProjectCardWrapperProps){
+function ProjectCardWrapper({ title, image, width, height, className}: ProjectCardWrapperProps){
   return(
-    <div className="flex flex-col justify-self-start items-start w-[41rem] bg-[var(--surface-secondary)] gap-8">
-    <Image src={image as StaticImageData} alt={title as string} width={width} height={height}/>
-    <h3 className="text-lg font-semibold text-[var(--text-base)] mr-4">{title}</h3>
-    <div className="flex flex-row gap-6">
+    <div className="flex flex-col justify-self-start items-start w-[27rem] bg-[var(--surface-secondary)] gap-8">
+    <Image src={image as StaticImageData} alt={title as string} width={width} height={height} className={className}/>
+    <h3 className="text-lg font-semibold text-[var(--text-base)] ml-4">{title}</h3>
+    <div className="flex flex-row gap-6 pl-4 pb-4">
     <CustomButton 
     text="Github"
     color="violet"

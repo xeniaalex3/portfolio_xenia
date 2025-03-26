@@ -17,8 +17,9 @@ function Projects() {
               key={item.title}
               title={item.title}
               image={item.image}
-              width={450}
-              height={450}
+              width={500}
+              height={500}
+              className='h-[50%]'
             />
           )
         })}

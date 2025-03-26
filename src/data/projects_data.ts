@@ -6,7 +6,8 @@ export const ProjectsData = [
     title: "Feedback Widget",
     image: image1,
     github_link: "https://github.com/xeniaalex3/Feedback-Widget",
-    demo: "https://feedback-widget-xi-snowy.vercel.app/"
+    demo: "https://feedback-widget-xi-snowy.vercel.app/",
+    className: true,
   },
   {
     title: "eSports",

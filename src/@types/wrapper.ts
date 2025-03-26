@@ -7,6 +7,7 @@ export interface ProjectCardWrapperProps {
   height?: number;
   github_link?: string;
   demo?: string;
+  className?: string;
 }
 
 export interface CardWrapperProps {

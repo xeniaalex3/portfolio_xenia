@@ -2,22 +2,22 @@ export const menuItems = [
   { name: "Home", path: "/", id: "/" },
   {
     name: "About",
-    path: "/about",
+    path: "#about",
     id: "about",
   },
   {
     name: "Skills",
-    path: "/skills",
+    path: "#skills",
     id: "skills",
   },
   {
     name: "Projects",
-    path: "/projects",
+    path: "#projects",
     id: "projects",
   },
   {
     name: "Contact",
-    path: "/contact",
+    path: "#contact",
     id: "contact",
   },
 ];

@@ -10,15 +10,16 @@ function Projects() {
       <h2 className="text-[var(--secondary-color)] font-semibold text-3xl mb-18">
         Projects
       </h2>
-      <div className="grid grid-cols-3 gap-x-15">
+      <div className="grid grid-cols-3 gap-x-10">
         {ProjectsData.map(item => {
           return (
             <ProjectCardWrapper
               key={item.title}
               title={item.title}
               image={item.image}
-              width={450}
-              height={450}
+              width={500}
+              height={600}
+              className='h-[60%]'
             />
           )
         })}

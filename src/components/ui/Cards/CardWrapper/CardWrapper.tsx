@@ -1,12 +1,5 @@
 import Image from 'next/image';
-
-export interface CardWrapperProps {
-  imageSrc?: string;
-  text?: string;
-  width?: number;
-  height?: number;
-  className?: string;
-}
+import { CardWrapperProps } from '@/@types/wrapper';
 
 function CardWrapper({imageSrc, text, width, height, className}: CardWrapperProps){
   return(

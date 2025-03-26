@@ -5,7 +5,7 @@ import CardWrapper from '../ui/Cards/CardWrapper/CardWrapper';
 
 function Skills() {
   return (
-    <section className="flex flex-col justify-center items-center w-[83rem] mx-auto">
+    <section className="flex flex-col justify-center items-center w-[83rem] mx-auto mb-[8rem]" id="skills">
       <h2 className="text-[var(--secondary-color)] font-semibold text-3xl mb-18">
         Skills
       </h2>

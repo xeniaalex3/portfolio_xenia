@@ -20,6 +20,8 @@ function Projects() {
               width={500}
               height={600}
               className='h-[60%]'
+              github_link={item.github_link}
+              demo={item.demo}
             />
           )
         })}

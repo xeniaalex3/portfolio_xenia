@@ -50,7 +50,7 @@ function CustomButton({
       // eslint-disable-next-line react/button-has-type
       type={type ?? "button"}
       className={clsx(
-        "cursor-pointer transition duration-300 px-6 py-2 text-[var(--text-primary)] flex items-center justify-center rounded-xl shadow-md",
+        "cursor-pointer transition duration-300 px-6 py-2 text-[var(--text-base)] flex items-center justify-center rounded-xl shadow-md",
         full ? "w-full" : "px-6 py-2 md:w-full",
         colorCss,
         customCss,

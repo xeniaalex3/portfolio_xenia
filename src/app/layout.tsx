@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { ThemeProvider } from '@/context/ThemeContext'
+import { ToastContextProvider } from '@/context/ToastProvider'
 import '@/styles/global.css'
 
 // metadata
@@ -17,9 +18,11 @@ export default function RootLayout({
     <html lang="fr">
       <body suppressHydrationWarning={true}>
         <ThemeProvider>
-          <div className="flex flex-col bg-[var(--surface-background)]">
-            <main>{children}</main>
-          </div>
+          <ToastContextProvider>
+            <div className="flex flex-col bg-[var(--surface-background)]">
+              <main>{children}</main>
+            </div>
+          </ToastContextProvider>
         </ThemeProvider>
       </body>
     </html>

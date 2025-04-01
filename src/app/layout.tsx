@@ -1,3 +1,6 @@
+import Header from '@/components/Header/Header'
+import Footer from '@/components/Footer/Footer'
+
 import type { Metadata } from 'next'
 import { ThemeProvider } from '@/context/ThemeContext'
 import { ToastContainer } from 'react-toastify'
@@ -24,7 +27,9 @@ export default function RootLayout({
         <ThemeProvider>
           <ToastContainer {...toastProps} />
           <div className="flex flex-col bg-[var(--surface-background)]">
+            <Header />
             <main>{children}</main>
+            <Footer />
           </div>
         </ThemeProvider>
       </body>

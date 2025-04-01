@@ -1,6 +1,7 @@
 import { StaticImageData } from "next/image";
 
 export interface ProjectCardWrapperProps {
+  id: number;
   image?: StaticImageData;
   title?: string;
   width?: number;

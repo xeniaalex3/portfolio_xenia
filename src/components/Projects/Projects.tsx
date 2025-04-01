@@ -14,7 +14,8 @@ function Projects() {
         {ProjectsData.map(item => {
           return (
             <ProjectCardWrapper
-              key={item.title}
+              key={item.id}
+              id={item.id}
               title={item.title}
               image={item.image}
               width={500}

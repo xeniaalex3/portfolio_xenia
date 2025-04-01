@@ -17,4 +17,6 @@ export interface TextareaProps {
   cols?: number;
   placeholder?: string;
   customCss?: string;
+  value: string;
+  setValue: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
 }

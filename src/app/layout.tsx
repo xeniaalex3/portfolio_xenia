@@ -1,6 +1,10 @@
 import type { Metadata } from 'next'
 import { ThemeProvider } from '@/context/ThemeContext'
-import { ToastContextProvider } from '@/context/ToastProvider'
+import { ToastContainer } from 'react-toastify'
+import { toastProps } from '@/utils/toastContainer'
+
+// style css
+import 'react-toastify/dist/ReactToastify.css'
 import '@/styles/global.css'
 
 // metadata
@@ -18,11 +22,10 @@ export default function RootLayout({
     <html lang="fr">
       <body suppressHydrationWarning={true}>
         <ThemeProvider>
-          <ToastContextProvider>
-            <div className="flex flex-col bg-[var(--surface-background)]">
-              <main>{children}</main>
-            </div>
-          </ToastContextProvider>
+          <ToastContainer {...toastProps} />
+          <div className="flex flex-col bg-[var(--surface-background)]">
+            <main>{children}</main>
+          </div>
         </ThemeProvider>
       </body>
     </html>

@@ -7,16 +7,15 @@ import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 import { IoLogoGithub } from 'react-icons/io'
 import { RiShareBoxFill } from 'react-icons/ri'
+import MagicButton from '@/components/ui/Form/MagicButton'
+import { useParams } from "next/navigation";
 
-export interface DetailsProjectProps {
-  project: string
-}
-
-function DetailsProject({ project }: DetailsProjectProps) {
+function DetailsProject() {
   const router = useRouter()
+  const { projectId } = useParams(); 
 
   const selectedProject = ProjectDetailsData.find(
-    item => item.id === Number(project)
+    item => item.id === Number(projectId)
   )
 
   const handelBackClick = () => {
@@ -27,9 +26,11 @@ function DetailsProject({ project }: DetailsProjectProps) {
     return <p className="text-center text-red-500">Project not found</p>
   }
 
-  const handleGithubClick = () => selectedProject?.github_link && window.open(selectedProject.github_link, '_blank')
-const handleDemoClick = () => selectedProject?.demo && window.open(selectedProject.demo, '_blank')
-
+  const handleGithubClick = () =>
+    selectedProject?.github_link &&
+    window.open(selectedProject.github_link, '_blank')
+  const handleDemoClick = () =>
+    selectedProject?.demo && window.open(selectedProject.demo, '_blank')
 
   return (
     <section className="flex flex-col mx-auto w-[75rem]">
@@ -42,30 +43,36 @@ const handleDemoClick = () => selectedProject?.demo && window.open(selectedProje
         customCss="!w-[6rem] !text-sm !font-normal"
       />
 
-      <div key={selectedProject.id} className="mt-[7rem]">
-        <div className="w-[50%] h-[30%] overflow-hidden box-border mb-6">
+      <div key={selectedProject.id} className="mt-[6rem]">
+        <div className="w-[40%] h-auto overflow-hidden rounded-lg shadow-lg box-border mb-6">
           <Image
             src={selectedProject.image}
             alt={selectedProject.title}
-            width={100}
-            height={100}
-            className="w-full h-full object-fill"
+            width={700}
+            height={400}
+            className="w-full h-auto object-contain rounded-lg"
           />
         </div>
-        <h2 className="text-2xl font-semibold text-[var(--text-primary)] mb-4">
+        <h2 className="text-2xl font-semibold text-[var(--primary-color)] mb-4">
           {selectedProject.title}
         </h2>
-        <h3 className="text-lg font-semibold text-[var(--text-primary)] mb-4">Description :</h3>
-        <p className='text-base font-medium text-[var(--text-secondary)] w-[60%] mb-4'>{selectedProject.description}</p>
-        <div>
-          <h3 className='text-lg font-semibold text-[var(--text-primary)] mb-4'>Technologies used :</h3>
-          <ul className='mb-4'>
-            {selectedProject.technos.map(tech => (
-              <li key={tech} className='ml-4'>{tech}</li>
-            ))}
-          </ul>
-        </div>
+        <h3 className="text-lg font-semibold text-[var(--text-primary)] mb-4">
+          Description :
+        </h3>
+        <p className="text-base font-medium text-[var(--text-secondary)] w-[60%] mb-4">
+          {selectedProject.description}
+        </p>
+
+        <h3 className="text-lg font-semibold text-[var(--text-primary)] mb-2">
+          Technologies used :
+        </h3>
         <div className="flex flex-row gap-4">
+          {selectedProject.technos.map(tech => (
+            <MagicButton key={tech} title={tech} />
+          ))}
+        </div>
+         <hr className="my-10 border-t border-[var(--text-secondary)]"/>
+        <div className="flex flex-row gap-4 mt-8">
           <CustomButton
             text="Github"
             color="violet"

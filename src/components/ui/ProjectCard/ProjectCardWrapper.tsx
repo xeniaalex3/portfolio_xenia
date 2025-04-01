@@ -28,7 +28,7 @@ function ProjectCardWrapper({
   return (
     <div className="flex flex-col w-[26rem] h-[25rem] bg-[var(--surface-secondary)] rounded-lg shadow-lg cursor-pointer">
       {/* Image Wrapper */}
-      <div className="w-full h-[18rem] overflow-hidden box-border">
+      <div className="w-full h-full overflow-hidden box-border">
         <Image
           src={image as StaticImageData}
           alt={title as string}

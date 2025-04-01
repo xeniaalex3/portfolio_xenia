@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from 'react'
 import Image from 'next/image'
 import { IoLogoLinkedin } from 'react-icons/io5'
 import { IoLogoGithub } from 'react-icons/io'
@@ -7,15 +10,44 @@ import TextInput from '../ui/Form/TextInput/TextInput'
 import Textarea from '../ui/Form/Textarea/Textarea'
 import CustomButton from '../ui/Form/Button/CustomButton'
 import { BsArrowRight } from 'react-icons/bs'
-import { useToastContext } from '@/context/ToastProvider'
+import { toast } from 'react-toastify'
 
 function Contact() {
-  const { setToast } = useToastContext();
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
 
-  
+  const handleName = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setName(event.target.value)
+  }
 
+  const handleEmail = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(event.target.value)
+  }
 
-  
+  const handleMessage = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setMessage(event.target.value)
+  }
+
+  const handleSubmitSendMessage = (event: React.FormEvent) => {
+    event.preventDefault()
+
+    if (!name || !email || !message) {
+      toast.error('Please fill in all fields.')
+      return
+    }
+
+    if (!/\S+@\S+\.\S+/.test(email)) {
+      toast.error('Please enter a valid email.')
+      return
+    }
+
+    toast.success('Message sent successfully!')
+
+    setName('')
+    setEmail('')
+    setMessage('')
+  }
 
   return (
     <section
@@ -64,33 +96,37 @@ function Contact() {
           </Link>
         </div>
       </div>
-      <div className="w-[55%]">
-        <form onSubmit={handleSubmit}>
+      <div className="w-[50%] flex flex-col gap-2">
+        <form onSubmit={handleSubmitSendMessage} className="w-[40%] px-4">
           <TextInput
             id="firstname"
             placeholder="Name"
             type="text"
-           
+            value={name}
+            setValue={handleName}
           />
           <TextInput
             id="email"
             placeholder="E-mail"
             type="text"
-           
+            value={email}
+            setValue={handleEmail}
           />
           <Textarea
             name="message"
             rows={5}
             cols={30}
             placeholder="Your message"
-            
+            value={message}
+            setValue={handleMessage}
           />
           <CustomButton
             type="submit"
             text="Send me a message"
             icon={<BsArrowRight />}
             color="violet"
-            onSubmit={handleSubmit(onSubmit)}
+            onSubmit={handleSubmitSendMessage}
+            customCss='w-[8rem] text-base font-normal'
           />
         </form>
       </div>

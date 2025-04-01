@@ -51,7 +51,7 @@ function Contact() {
 
   return (
     <section
-      className="w-[83rem] h-[26rem] bg-[var(--surface-primary)] mx-auto mt-[13rem] mb-[7rem] flex items-center justify-between shadow-lg rounded-lg"
+      className="w-[83rem] h-[26rem] bg-[var(--surface-primary)] mx-auto mt-[13rem] mb-[7rem] flex items-center justify-between shadow-lg rounded-lg gap-9"
       id="contact"
     >
       <div className="flex flex-col gap-4 w-2/5 px-10">
@@ -96,8 +96,8 @@ function Contact() {
           </Link>
         </div>
       </div>
-      <div className="w-[50%] flex flex-col gap-2">
-        <form onSubmit={handleSubmitSendMessage} className="w-[40%] px-4">
+      <div className="w-[47%] flex flex-col gap-2">
+        <form onSubmit={handleSubmitSendMessage} className="px-10">
           <TextInput
             id="firstname"
             placeholder="Name"
@@ -119,14 +119,15 @@ function Contact() {
             placeholder="Your message"
             value={message}
             setValue={handleMessage}
+            customCss='mb-5'
           />
           <CustomButton
             type="submit"
             text="Send me a message"
-            icon={<BsArrowRight />}
+            icon={<BsArrowRight className='ml-2'/>}
             color="violet"
             onSubmit={handleSubmitSendMessage}
-            customCss='w-[8rem] text-base font-normal'
+            customCss='!w-[13rem] !text-sm !font-normal'
           />
         </form>
       </div>

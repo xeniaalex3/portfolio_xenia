@@ -82,14 +82,14 @@ function Contact() {
         <div className="flex flex-row gap-2">
           <Link
             href="https://www.linkedin.com/in/xenia-onescu/"
-            className="p-2 bg-[var(--surface-secondary)] rounded-lg w-[4rem] h-[2.5rem] flex flex-row justify-center items-center"
+            className="p-2 bg-[var(--surface-secondary)] border border-transparent hover:border-[var(--secondary-color)] rounded-lg w-[3.8rem] h-[2.5rem] flex flex-row justify-center items-center"
             target="_blank"
           >
             <IoLogoLinkedin size={24} />
           </Link>
           <Link
             href="https://github.com/xeniaalex3"
-            className="p-2 bg-[var(--surface-secondary)] rounded-lg w-[4rem] h-[2.5rem] flex flex-row justify-center items-center"
+            className="p-2 bg-[var(--surface-secondary)] border border-transparent hover:border-[var(--secondary-color)] rounded-lg w-[3.8rem] h-[2.5rem] flex flex-row justify-center items-center"
             target="_blank"
           >
             <IoLogoGithub size={24} />
@@ -124,7 +124,7 @@ function Contact() {
           <CustomButton
             type="submit"
             text="Send me a message"
-            icon={<BsArrowRight className='ml-2'/>}
+            icon={<BsArrowRight className='ml-2 w-5'/>}
             color="violet"
             onSubmit={handleSubmitSendMessage}
             customCss='!w-[13rem] !text-sm !font-normal'

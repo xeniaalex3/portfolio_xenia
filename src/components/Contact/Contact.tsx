@@ -51,7 +51,7 @@ function Contact() {
 
   return (
     <section
-      className="w-[83rem] h-[26rem] bg-[var(--surface-primary)] mx-auto mt-[13rem] mb-[7rem] flex items-center justify-between shadow-lg rounded-lg"
+      className="w-[83rem] h-[26rem] bg-[var(--surface-primary)] mx-auto mt-[13rem] mb-[7rem] flex items-center justify-between shadow-lg rounded-lg gap-9"
       id="contact"
     >
       <div className="flex flex-col gap-4 w-2/5 px-10">
@@ -82,22 +82,22 @@ function Contact() {
         <div className="flex flex-row gap-2">
           <Link
             href="https://www.linkedin.com/in/xenia-onescu/"
-            className="p-2 bg-[var(--surface-secondary)] rounded-lg w-[4rem] h-[2.5rem] flex flex-row justify-center items-center"
+            className="p-2 bg-[var(--surface-secondary)] border border-transparent hover:border-[var(--secondary-color)] rounded-lg w-[3.8rem] h-[2.5rem] flex flex-row justify-center items-center"
             target="_blank"
           >
             <IoLogoLinkedin size={24} />
           </Link>
           <Link
             href="https://github.com/xeniaalex3"
-            className="p-2 bg-[var(--surface-secondary)] rounded-lg w-[4rem] h-[2.5rem] flex flex-row justify-center items-center"
+            className="p-2 bg-[var(--surface-secondary)] border border-transparent hover:border-[var(--secondary-color)] rounded-lg w-[3.8rem] h-[2.5rem] flex flex-row justify-center items-center"
             target="_blank"
           >
             <IoLogoGithub size={24} />
           </Link>
         </div>
       </div>
-      <div className="w-[50%] flex flex-col gap-2">
-        <form onSubmit={handleSubmitSendMessage} className="w-[40%] px-4">
+      <div className="w-[47%] flex flex-col gap-2">
+        <form onSubmit={handleSubmitSendMessage} className="px-10">
           <TextInput
             id="firstname"
             placeholder="Name"
@@ -119,14 +119,15 @@ function Contact() {
             placeholder="Your message"
             value={message}
             setValue={handleMessage}
+            customCss='mb-5'
           />
           <CustomButton
             type="submit"
             text="Send me a message"
-            icon={<BsArrowRight />}
+            icon={<BsArrowRight className='ml-2 w-5'/>}
             color="violet"
             onSubmit={handleSubmitSendMessage}
-            customCss='w-[8rem] text-base font-normal'
+            customCss='!w-[13rem] !text-sm !font-normal'
           />
         </form>
       </div>

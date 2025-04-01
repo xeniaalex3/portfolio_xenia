@@ -21,7 +21,7 @@ function ProjectCardWrapper({
   const handleDemoClick = () => window.open(demo, "_blank");
 
   return (
-    <div className="flex flex-col w-[26rem] h-[25rem] bg-[var(--surface-secondary)] rounded-lg shadow-lg cursor-pointer border border-transparent hover:border-[var(--secondary-color)]">
+    <div className="flex flex-col w-[26rem] h-[25rem] bg-[var(--surface-secondary)] rounded-lg shadow-lg cursor-pointer">
       {/* Image Wrapper */}
       <div className="w-full h-[18rem] overflow-hidden box-border">
         <Image
@@ -41,24 +41,24 @@ function ProjectCardWrapper({
             text="Github"
             color="violet"
             type="button"
-            icon={<IoLogoGithub className="ml-4 w-5" />}
-            customCss="!w-[7rem] !h-[2.5rem]"
+            icon={<IoLogoGithub className="ml-2 w-5" />}
+            customCss="!w-[6.5rem] !h-[2.5rem]"
             onClick={handleGithubClick}
           />
           <CustomButton
             text="Live"
             color="violet"
             type="button"
-            icon={<RiShareBoxFill className="ml-4 w-5" />}
+            icon={<RiShareBoxFill className="ml-2 w-5" />}
             onClick={handleDemoClick}
-            customCss="!w-[7rem] !h-[2.5rem]"
+            customCss="!w-[6.5rem] !h-[2.5rem]"
           />
           <CustomButton
             text="Details"
             color="violet"
             type="button"
-            icon={<HiViewGridAdd className="ml-4 w-5" />}
-            customCss="!w-[7rem] !h-[2.5rem]"
+            icon={<HiViewGridAdd className="ml-2 w-5" />}
+            customCss="!w-[6.5rem] !h-[2.5rem]"
           />
         </div>
       </div>

@@ -15,10 +15,10 @@ export const ProjectsData = [
     github_link: "https://github.com/xeniaalex3/eSports",
     demo: "https://e-sports-phi.vercel.app/"
   },
-  {
-    title: "Ticket SAV",
-    image: image2,
-    github_link: "https://github.com/xeniaalex3/eSports",
-    demo: "https://e-sports-phi.vercel.app/"
-  },
+  // {
+  //   title: "Ticket SAV",
+  //   image: image2,
+  //   github_link: "https://github.com/xeniaalex3/eSports",
+  //   demo: "https://e-sports-phi.vercel.app/"
+  // },
 ]

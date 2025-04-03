@@ -1,4 +1,4 @@
-export const isFocusPage = (pathname, page) => {
+export const isFocusPage = (pathname: string, page: string): boolean => {
   if (!pathname || !page) {
     return false;
   }

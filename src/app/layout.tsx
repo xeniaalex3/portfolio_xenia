@@ -26,9 +26,9 @@ export default function RootLayout({
       <body suppressHydrationWarning={true}>
         <ThemeProvider>
           <ToastContainer {...toastProps} />
-          <div className="flex flex-col bg-[var(--surface-background)]">
+          <div className="flex flex-col min-h-screen bg-[var(--surface-background)]">
             <Header />
-            <main>{children}</main>
+            <main className='flex-1'>{children}</main>
             <Footer />
           </div>
         </ThemeProvider>

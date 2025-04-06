@@ -33,18 +33,18 @@ function DetailsProject() {
     selectedProject?.demo && window.open(selectedProject.demo, '_blank')
 
   return (
-    <section className="flex flex-col mx-auto w-[75rem]">
+    <section className="flex flex-col mx-auto xl:w-[75rem] sm:w-[25rem] sm:mx-auto">
       <CustomButton
         type="button"
         text="Back"
         icon={<FaArrowLeft className="ml-2 w-5" />}
         color="violet"
         onClick={handelBackClick}
-        customCss="!w-[6rem] !text-sm !font-normal"
+        customCss="!w-[6rem] !text-sm !font-normal mt-4 sm:w-[5rem] sm:text-xs sm:font-light"
       />
 
       <div key={selectedProject.id} className="mt-[6rem]">
-        <div className="w-[40%] h-auto overflow-hidden rounded-lg shadow-lg box-border mb-6">
+        <div className="xl:max-w-[40%] sm:w-[95%] h-auto overflow-hidden rounded-lg shadow-lg box-border mb-6">
           <Image
             src={selectedProject.image}
             alt={selectedProject.title}
@@ -59,20 +59,20 @@ function DetailsProject() {
         <h3 className="text-lg font-semibold text-[var(--text-primary)] mb-4">
           Description :
         </h3>
-        <p className="text-base font-medium text-[var(--text-secondary)] w-[60%] mb-4">
+        <p className="text-base font-medium text-[var(--text-secondary)] w-[60%] sm:w-[90%] mb-6">
           {selectedProject.description}
         </p>
 
         <h3 className="text-lg font-semibold text-[var(--text-primary)] mb-2">
           Technologies used :
         </h3>
-        <div className="flex flex-row gap-4">
+        <div className="grid grid-cols-4 gap-4 sm:grid-cols-2 sm:mx-auto">
           {selectedProject.technos.map(tech => (
             <MagicButton key={tech} title={tech} />
           ))}
         </div>
          <hr className="my-10 border-t border-[var(--text-secondary)]"/>
-        <div className="flex flex-row gap-4 mt-8">
+        <div className="flex md:flex-row gap-4 mt-8 mb-8 sm:flex-row sm:items-center">
           <CustomButton
             text="Github"
             color="violet"

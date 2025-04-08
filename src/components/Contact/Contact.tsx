@@ -51,7 +51,7 @@ function Contact() {
 
   return (
     <section
-      className="lg:w-[83rem] lg:h-[26rem] md:w-[39rem] md:h-[52rem] bg-[var(--surface-primary)] mx-auto mt-[13rem] mb-[7rem] flex items-center lg:justify-between md:justify-evenly md:flex-col shadow-lg rounded-lg gap-9"
+      className="2xl:w-[83rem] xl:w-[70rem] lg:w-[55rem] lg:h-[26rem] md:w-[39rem] md:h-[52rem] bg-[var(--surface-primary)] mx-auto mt-[13rem] mb-[7rem] flex items-center lg:justify-between md:justify-evenly lg:flex-row md:flex-col shadow-lg rounded-lg gap-9"
       id="contact"
     >
       <div className="flex flex-col gap-4 lg:w-2/5 px-10 md:w-[76%]">

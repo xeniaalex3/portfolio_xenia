@@ -9,7 +9,7 @@ import SparklesText from '@/components/ui/Sparkles/SparklesText'
 
 function Home() {
   return (
-    <section className="flex xl:flex-row justify-center items-center xl:gap-[21rem] md:flex-col md:gap-[5rem] lg:mt-14 md:mt-20">
+    <section className="flex xl:flex-row justify-center items-center 2xl:gap-[21rem] xl:gap-[10rem] lg:gap-[1rem] lg:flex-row md:flex-col md:gap-[5rem] lg:mt-14 md:mt-20">
       <div className="lg:w-[35rem] md:w-[39rem]">
         <h1 className="font-semibold text-4xl bg-linear-65 from-[var(--primary-color)] to-[var(--secondary-color)] inline-block text-transparent bg-clip-text mb-4">
           Hi, I&apos;m Xenia

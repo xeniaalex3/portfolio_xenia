@@ -51,10 +51,10 @@ function Contact() {
 
   return (
     <section
-      className="w-[83rem] h-[26rem] bg-[var(--surface-primary)] mx-auto mt-[13rem] mb-[7rem] flex items-center justify-between shadow-lg rounded-lg gap-9"
+      className="lg:w-[83rem] lg:h-[26rem] md:w-[39rem] md:h-[52rem] bg-[var(--surface-primary)] mx-auto mt-[13rem] mb-[7rem] flex items-center lg:justify-between md:justify-evenly md:flex-col shadow-lg rounded-lg gap-9"
       id="contact"
     >
-      <div className="flex flex-col gap-4 w-2/5 px-10">
+      <div className="flex flex-col gap-4 lg:w-2/5 px-10 md:w-[76%]">
         <div className="w-23 h-23 rounded-full overflow-hidden border-2 border-white">
           <Image
             src={photo}
@@ -96,7 +96,7 @@ function Contact() {
           </Link>
         </div>
       </div>
-      <div className="w-[47%] flex flex-col gap-2">
+      <div className="lg:w-[47%] md:w-[76%] flex flex-col gap-2">
         <form onSubmit={handleSubmitSendMessage} className="px-10">
           <TextInput
             id="firstname"

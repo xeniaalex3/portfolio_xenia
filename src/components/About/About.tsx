@@ -3,7 +3,7 @@ import Image from 'next/image'
 function About() {
   return (
     <section
-      className="w-[83rem] h-[27rem] bg-[var(--surface-primary)] mx-auto mt-[13rem] mb-[7rem] flex items-center justify-between shadow-lg rounded-lg"
+      className="lg:w-[83rem] lg:h-[27rem] md:w-[39rem] md:h-[63rem] bg-[var(--surface-primary)] mx-auto mt-[13rem] mb-[7rem] flex items-center lg:justify-between md:justify-evenly shadow-lg rounded-lg md:flex-col-reverse lg:flex-row"
       id="about"
     >
       <div className="flex justify-center w-2/5">
@@ -14,7 +14,7 @@ function About() {
           height={330}
         />
       </div>
-      <div className="w-[55%] flex flex-col justify-center pr-7.5 py-8">
+      <div className="lg:w-[55%] md:w-[76%] flex flex-col justify-center pr-7.5 py-8">
         <h2 className="text-[var(--secondary-color)] font-semibold text-2xl mb-6">
           About me
         </h2>

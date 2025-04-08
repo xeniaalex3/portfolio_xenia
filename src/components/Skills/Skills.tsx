@@ -5,11 +5,11 @@ import CardWrapper from '../ui/Cards/CardWrapper/CardWrapper';
 
 function Skills() {
   return (
-    <section className="flex flex-col justify-center items-center w-[83rem] mx-auto mb-[8rem]" id="skills">
+    <section className="flex flex-col justify-center items-center lg:w-[83rem] mx-auto mb-[8rem] md:w-[39rem]" id="skills">
       <h2 className="text-[var(--secondary-color)] font-semibold text-3xl mb-18">
         Skills
       </h2>
-      <div className="grid grid-cols-3 gap-x-26">
+      <div className="grid lg:grid-cols-3 gap-x-26 md:grid-cols-1 lg:gap-y-0 md:gap-y-16">
         <div className='flex flex-col justify-center items-center'>
           <h3 className="text-[var(--secondary-color)] font-medium text-[1.17rem] mb-6">
             Front-end

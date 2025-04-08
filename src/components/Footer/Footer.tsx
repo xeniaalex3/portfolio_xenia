@@ -1,8 +1,5 @@
-'use client'
-
 function Footer() {
-  const date = new Date()
-  const year = date.getFullYear()
+  const year = new Date().getFullYear()
 
   return (
     <footer className="flex flex-row justify-center items-center py-4">

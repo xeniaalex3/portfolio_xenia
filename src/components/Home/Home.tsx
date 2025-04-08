@@ -9,9 +9,9 @@ import SparklesText from '@/components/ui/Sparkles/SparklesText'
 
 function Home() {
   return (
-    <section className="flex xl:flex-row justify-center items-center 2xl:gap-[21rem] xl:gap-[10rem] lg:gap-[1rem] lg:flex-row md:flex-col md:gap-[5rem] lg:mt-14 md:mt-20">
-      <div className="lg:w-[35rem] md:w-[39rem]">
-        <h1 className="font-semibold text-4xl bg-linear-65 from-[var(--primary-color)] to-[var(--secondary-color)] inline-block text-transparent bg-clip-text mb-4">
+    <section className="flex xl:flex-row justify-center items-center 2xl:gap-[21rem] xl:gap-[10rem] lg:gap-[1rem] lg:flex-row md:flex-col sm:flex-col xs:flex-col md:gap-[5rem] lg:mt-14 md:mt-20 xs:mt-5">
+      <div className="lg:w-[35rem] md:w-[39rem] sm:w-[22rem] xs:w-[22rem]">
+        <h1 className="font-semibold md:text-4xl sm:text-2xl xs:text-xl bg-linear-65 from-[var(--primary-color)] to-[var(--secondary-color)] inline-block text-transparent bg-clip-text mb-4">
           Hi, I&apos;m Xenia
         </h1>
         <h2 className="text-[var(--text-primary)] font-medium mb-4 text-lg">
@@ -31,7 +31,7 @@ function Home() {
           text="Let's build something amazing together !"
         />
       </div>
-      <div className="relative lg:flex px-20 lg:h-[500px] h-[330px] w-[400px] flex-col items-center justify-center overflow-hidden sm:hidden md:hidden">
+      <div className="relative lg:flex px-20 lg:h-[500px] h-[330px] w-[400px] flex-col items-center justify-center overflow-hidden md:hidden sm:hidden xs:hidden">
         <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300 bg-clip-text text-center lg:text-5xl text-5xl font-semibold leading-none text-transparent dark:from-white dark:to-black">
           Skills
         </span>

@@ -26,7 +26,7 @@ function ProjectCardWrapper({
   const handleDetailsClick = () => router.push(`/projects/${id}`);
 
   return (
-    <div className="flex flex-col w-[26rem] h-[25rem] bg-[var(--surface-secondary)] rounded-lg shadow-lg cursor-pointer">
+    <div className="flex flex-col md:w-[26rem] md:h-[25rem] xs:w-[23rem] bg-[var(--surface-secondary)] rounded-lg shadow-lg cursor-pointer">
       {/* Image Wrapper */}
       <div className="w-full h-full overflow-hidden box-border">
         <Image

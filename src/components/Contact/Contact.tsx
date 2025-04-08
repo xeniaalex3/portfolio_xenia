@@ -51,7 +51,7 @@ function Contact() {
 
   return (
     <section
-      className="2xl:w-[83rem] xl:w-[70rem] lg:w-[55rem] lg:h-[26rem] md:w-[39rem] md:h-[52rem] xs:h-[46rem] sm:w-[23rem] xs:w-[23rem] bg-[var(--surface-primary)] mx-auto mt-[13rem] mb-[7rem] flex items-center lg:justify-between md:justify-evenly lg:flex-row md:flex-col xs:flex-col shadow-lg rounded-lg gap-9"
+      className="2xl:w-[83rem] xl:w-[70rem] lg:w-[55rem] lg:h-[26rem] md:w-[39rem] md:h-[52rem] xs:h-[48rem] sm:w-[23rem] xs:w-[23rem] bg-[var(--surface-primary)] mx-auto mt-[13rem] mb-[7rem] flex items-center lg:justify-between md:justify-evenly lg:flex-row md:flex-col xs:flex-col shadow-lg rounded-lg gap-9"
       id="contact"
     >
       <div className="flex flex-col gap-4 lg:w-2/5 px-10 md:w-[76%] md:mt-0 xs:mt-[2rem]">
@@ -96,7 +96,7 @@ function Contact() {
           </Link>
         </div>
       </div>
-      <div className="lg:w-[47%] md:w-[76%] flex flex-col gap-2">
+      <div className="lg:w-[47%] md:w-[76%] xs:w-[100%] flex flex-col gap-2">
         <form onSubmit={handleSubmitSendMessage} className="px-10">
           <TextInput
             id="firstname"

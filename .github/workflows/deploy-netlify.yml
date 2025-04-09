@@ -1,7 +1,6 @@
 name: Deploy Netlify
 
 on: 
-  workflow_dispatch:
   push:
     branches:
       - main
@@ -20,23 +19,17 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install Netlify CLI
-        run: npm install -g netlify-cli
-
       - name: Install dependencies
         run: npm install
         
-      - name: Build the project
-        run: npm run build
-
       - name: Build with Netlify
-        run: netlify build
+        run: npx netlify build
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_API_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
 
       - name: Deploy to Netlify
-        run: netlify deploy --prod
+        run: npx netlify deploy --prod
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_API_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}

@@ -18,3 +18,13 @@ export interface CardWrapperProps {
   height?: number;
   className?: string;
 }
+
+export interface DetailProjectProps {
+  id: number | string;
+  title: string;
+  description?: string;
+  image: StaticImageData;
+  technos: string[];
+  github_link?: string;
+  demo?: string;
+}

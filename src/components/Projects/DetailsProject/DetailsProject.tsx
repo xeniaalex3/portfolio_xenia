@@ -1,4 +1,4 @@
-"use client"
+'use client'
 
 import { Suspense } from 'react'
 import CustomButton from '@/components/ui/Form/Button/CustomButton'
@@ -7,11 +7,11 @@ import Image from 'next/image'
 import { IoLogoGithub } from 'react-icons/io'
 import { RiShareBoxFill } from 'react-icons/ri'
 import MagicButton from '@/components/ui/Form/MagicButton'
-import { useRouter } from "next/navigation";
-import { DetailProjectProps } from "@/@types/wrapper";
+import { useRouter } from 'next/navigation'
+import { DetailProjectProps } from '@/@types/wrapper'
 
 type ProjectProps = {
-  project: DetailProjectProps 
+  project: DetailProjectProps
 }
 
 function DetailsProject({ project }: ProjectProps) {
@@ -22,8 +22,7 @@ function DetailsProject({ project }: ProjectProps) {
   }
 
   const handleGithubClick = () =>
-    project?.github_link &&
-    window.open(project.github_link, '_blank')
+    project?.github_link && window.open(project.github_link, '_blank')
   const handleDemoClick = () =>
     project?.demo && window.open(project.demo, '_blank')
 

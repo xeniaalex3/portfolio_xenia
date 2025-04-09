@@ -25,7 +25,7 @@ function Header() {
       </Link>
 
       <MenuMobile className="sm:block xs:block" />
-      <nav className="md:flex flex-row justify-end items-center gap-4 sm:hidden xs:hidden">
+      <nav className="2xl:flex xl:flex lg:flex md:flex flex-row justify-end items-center gap-4 sm:hidden xs:hidden">
         {menuItems.map(item => (
           <MenuLinks
             key={item.name}

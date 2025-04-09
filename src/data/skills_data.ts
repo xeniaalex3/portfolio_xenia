@@ -1,3 +1,5 @@
+import CiCd from "@/assets/image/ci-cd.svg";
+
 export const SkillsDataFrontJson = [
   {
     title: "HTML",
@@ -93,6 +95,11 @@ export const SkillsDataToolsJson = [
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg",
   },
   {
+    title: "CI / CD",
+    imageLink:
+      CiCd,
+  },
+  {
     title: "Git",
     imageLink:
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
@@ -101,6 +108,11 @@ export const SkillsDataToolsJson = [
     title: "GitHub",
     imageLink:
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg",
+  },
+  {
+    title: "GitHub Actions",
+    imageLink:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubactions/githubactions-original.svg",
   },
   {
     title: "GitLab",

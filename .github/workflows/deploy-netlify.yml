@@ -1,0 +1,35 @@
+name: Deploy Netlify
+
+on: 
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    environment: production
+    runs-on: ubuntu-latest
+
+    # Steps in job
+    steps:
+      # Get code from repo
+      - name: Checkout Code
+        uses: actions/checkout@v4
+      
+      # Install NodeJS
+      - name: Use Node.js 20.x
+        uses: actions/setup-node@v4
+        with:
+            node-version: 20
+            
+      - name: Install Netlify CLI
+        run: npm install -g netlify-cli
+      - name: Install deps
+        run: npm install
+
+      - name: Deploy to Netlify
+        run: npm run deploy:prod
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_API_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}

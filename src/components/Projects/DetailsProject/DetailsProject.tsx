@@ -1,5 +1,6 @@
 'use client'
 
+import { Suspense } from 'react'
 import CustomButton from '@/components/ui/Form/Button/CustomButton'
 import { ProjectDetailsData } from '@/data/projects_data'
 import { FaArrowLeft } from 'react-icons/fa'
@@ -33,7 +34,8 @@ function DetailsProject() {
     selectedProject?.demo && window.open(selectedProject.demo, '_blank')
 
   return (
-    <section className="flex flex-col mx-auto xl:w-[75rem] md:w-[35rem] lg:w-[50rem] sm:w-[25rem] sm:mx-auto">
+    <Suspense fallback={<div>Loading...</div>}>
+ <section className="flex flex-col mx-auto xl:w-[75rem] md:w-[35rem] lg:w-[50rem] sm:w-[25rem] sm:mx-auto">
       <CustomButton
         type="button"
         text="Back"
@@ -92,6 +94,8 @@ function DetailsProject() {
         </div>
       </div>
     </section>
+    </Suspense>
+   
   )
 }
 

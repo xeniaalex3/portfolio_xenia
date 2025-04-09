@@ -19,23 +19,23 @@ function MenuMobile({ className }: MenuMobileProps) {
   const handleClose = () => setOpen(false)
 
   return (
-    <div className={`flex mt-2 md:hidden ${className}`}>
+    <div className={`flex flex-row justify-center items-center ${className}`}>
       <div
-        className="text-[var(--color-text)] cursor-pointer"
+        className="text-[var(--text-primary)] cursor-pointer"
         onClick={() => setOpen(!open)}
       >
-        <AiOutlineMenu className="text-base" />
+        <AiOutlineMenu className="w-[1.8rem] h-[1.8rem]" />
       </div>
       {open && (
-        <header className="fixed top-0 left-0 w-screen h-screen bg-slate-50 flex flex-col pl-16 z-[10000]">
+        <header className="fixed top-0 left-0 w-full h-full bg-[var(--surface-tertiary)] flex flex-col pl-7 z-[10000]">
           <span
-            onClick={() => setOpen(false)}
-            className="absolute top-6 right-24 flex justify-end"
+            onClick={handleClose}
+            className="absolute top-2 right-6 flex justify-end"
           >
-            <IoCloseOutline className="w-[3rem] h-[3rem] text-[var(--color-text)]" />
+            <IoCloseOutline className="w-[2rem] h-[2rem] text-[var(--text-primary)]" />
           </span>
 
-          <nav className="flex flex-col justify-center items-start mt-32">
+          <nav className="flex flex-col justify-center items-start mt-16">
             <ul>
               {menuItems.map(item => (
                 <MenuLinks
@@ -43,7 +43,6 @@ function MenuMobile({ className }: MenuMobileProps) {
                   path={item.path}
                   name={item.name}
                   focus={isFocusPage(pathname, item.id)}
-                  isOpen={open}
                   pathname={pathname}
                   id={item.id}
                   onClose={handleClose}

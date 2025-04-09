@@ -3,7 +3,7 @@ import Image from 'next/image'
 function About() {
   return (
     <section
-      className="2xl:w-[83rem] xl:w-[70rem] lg:w-[55rem] xl:h-[27rem] lg:h-[27rem] md:w-[39rem] md:h-[63rem] sm:w-[23rem] xs:w-[23rem] sm:h-[63rem] xs:h-[46rem] bg-[var(--surface-primary)] mx-auto md:mt-[13rem] xs:mt-[10rem] mb-[7rem] flex items-center lg:justify-between md:justify-evenly shadow-lg rounded-lg md:flex-col-reverse lg:flex-row xl:flex-row sm:flex-col-reverse xs:flex-col-reverse"
+      className="2xl:w-[83rem] xl:w-[70rem] lg:w-[55rem] xl:h-[27rem] lg:h-[27rem] md:w-[39rem] md:h-[63rem] sm:w-[23rem] xs:w-[23rem] sm:h-[63rem] xs:h-[48rem] bg-[var(--surface-primary)] mx-auto md:mt-[13rem] xs:mt-[10rem] mb-[7rem] flex items-center lg:justify-between md:justify-evenly shadow-lg rounded-lg md:flex-col-reverse lg:flex-row xl:flex-row sm:flex-col-reverse xs:flex-col-reverse"
       id="about"
     >
       <div className="flex justify-center w-2/5 md:mb-0 xs:mb-4 md:mt-0 xs:mt-2">
@@ -14,7 +14,7 @@ function About() {
           height={330}
         />
       </div>
-      <div className="lg:w-[55%] md:w-[76%] flex flex-col justify-center md:pr-7.5 md:py-8 xs:px-2">
+      <div className="lg:w-[55%] md:w-[76%] flex flex-col justify-center md:pr-7.5 md:py-8  md:px-0 xs:px-5">
         <h2 className="text-[var(--secondary-color)] font-semibold text-2xl mb-6">
           About me
         </h2>

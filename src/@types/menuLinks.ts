@@ -4,6 +4,5 @@ export interface MenuLinksProps {
   id: string;
   focus: boolean;
   pathname: string;
-  isOpen?: boolean,
   onClose?: () => void;
 }

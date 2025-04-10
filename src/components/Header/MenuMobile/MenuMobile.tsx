@@ -27,7 +27,7 @@ function MenuMobile({ className }: MenuMobileProps) {
         <AiOutlineMenu className="w-[1.8rem] h-[1.8rem]" />
       </div>
       {open && (
-        <header className="fixed top-0 left-0 w-full h-full bg-[var(--surface-tertiary)] flex flex-col pl-7 z-[10000]">
+        <header className="fixed top-0 left-0 w-full h-full bg-[var(--surface-tertiary)] flex flex-col justify-center items-center z-[10000]">
           <span
             onClick={handleClose}
             className="absolute top-2 right-6 flex justify-end"
@@ -35,8 +35,8 @@ function MenuMobile({ className }: MenuMobileProps) {
             <IoCloseOutline className="w-[2rem] h-[2rem] text-[var(--text-primary)]" />
           </span>
 
-          <nav className="flex flex-col justify-center items-start mt-16">
-            <ul>
+          <nav className="flex flex-col justify-center items-center">
+            <ul className="flex flex-col items-center space-y-5">
               {menuItems.map(item => (
                 <MenuLinks
                   key={item.name}

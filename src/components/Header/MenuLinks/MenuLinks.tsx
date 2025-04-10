@@ -4,7 +4,7 @@ import { MenuLinksProps } from '@/@types/menuLinks'
 function MenuLinks({ path, name, pathname, id, focus, onClose }: MenuLinksProps) {
   const newFocus = !!(pathname?.split('/')?.[1] === id)
   return (
-    <div className="flex flex-row xs:gap-2">
+    <div className="flex flex-row">
       <Link href={path} onClick={onClose}>
         <li
           className={`flex hover:text-[var(--primary-color)] text-[var(--text-secondary)] ${
@@ -12,7 +12,7 @@ function MenuLinks({ path, name, pathname, id, focus, onClose }: MenuLinksProps)
           }`}
         >
           <p
-            className={`transition duration-300 ease-in-out md:text-base md:font-medium xs:text-font-semibold ${
+            className={`transition duration-300 ease-in-out md:text-base md:font-medium xs:text-2xl xs:font-medium ${
               focus || newFocus ? 'text-[var(--primary-color)]' : ''
             }`}
           >

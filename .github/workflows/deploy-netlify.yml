@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - main
+permissions:
+  contents: write
+  pull-requests: write
+  
 
 jobs:
   deploy:
@@ -33,3 +37,13 @@ jobs:
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_API_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+      
+      - name: Create deployment tag
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+            git config user.name "xeniaalex3"
+            git config user.email "xeniaalex2@gmail.com"
+            git tag -a "deploy-$(date +'%Y%m%d-%H%M')" -m "Automatic deployment via GitHub Actions"
+            git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}
+            git push origin --tags

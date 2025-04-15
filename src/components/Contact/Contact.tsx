@@ -1,52 +1,44 @@
-"use client";
+'use client'
 
-import { useState } from 'react'
 import Image from 'next/image'
 import { IoLogoLinkedin } from 'react-icons/io5'
 import { IoLogoGithub } from 'react-icons/io'
 import photo from '@/assets/image/photo.jpg'
 import Link from 'next/link'
-import TextInput from '../ui/Form/TextInput/TextInput'
-import Textarea from '../ui/Form/Textarea/Textarea'
 import CustomButton from '../ui/Form/Button/CustomButton'
 import { BsArrowRight } from 'react-icons/bs'
 import { toast } from 'react-toastify'
+import { useForm } from 'react-hook-form'
+import { formSchema } from '@/utils/zodSchema'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { z } from 'zod'
+import { send } from '@/utils/email'
+
+type createMessageContactData = z.infer<typeof formSchema>
 
 function Contact() {
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [message, setMessage] = useState('')
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors }
+  } = useForm<createMessageContactData>({
+    resolver: zodResolver(formSchema)
+  })
 
-  const handleName = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setName(event.target.value)
-  }
+  const sendMessageForm = async (data: createMessageContactData) => {
+    try {
+      send(data);
 
-  const handleEmail = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setEmail(event.target.value)
-  }
+      await new Promise(resolve => setTimeout(resolve, 1000))
 
-  const handleMessage = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
-    setMessage(event.target.value)
-  }
+      toast.success('Message sent successfully!')
 
-  const handleSubmitSendMessage = (event: React.FormEvent) => {
-    event.preventDefault()
-
-    if (!name || !email || !message) {
-      toast.error('Please fill in all fields.')
-      return
+      reset()
+    } catch (error) {
+      console.error('Erro ao enviar a mensagem:', error)
+      toast.error('An error occurred while sending the message. Please try again.')
     }
-
-    if (!/\S+@\S+\.\S+/.test(email)) {
-      toast.error('Please enter a valid email.')
-      return
-    }
-
-    toast.success('Message sent successfully!')
-
-    setName('')
-    setEmail('')
-    setMessage('')
   }
 
   return (
@@ -97,37 +89,46 @@ function Contact() {
         </div>
       </div>
       <div className="lg:w-[47%] md:w-[76%] xs:w-[100%] flex flex-col gap-2">
-        <form onSubmit={handleSubmitSendMessage} className="px-10">
-          <TextInput
-            id="firstname"
-            placeholder="Name"
-            type="text"
-            value={name}
-            setValue={handleName}
-          />
-          <TextInput
-            id="email"
-            placeholder="E-mail"
-            type="text"
-            value={email}
-            setValue={handleEmail}
-          />
-          <Textarea
-            name="message"
-            rows={5}
-            cols={30}
-            placeholder="Your message"
-            value={message}
-            setValue={handleMessage}
-            customCss='mb-5'
-          />
+        <form
+          onSubmit={handleSubmit(sendMessageForm)}
+          className="px-10 flex flex-col gap-4"
+        >
+          <div className="flex flex-col">
+            <input
+              type="text"
+              className="block w-full rounded-md border-0 px-2 py-1.5 text-[var(--text-base)] shadow-md placeholder:text-[var(--text-secondary)] focus:ring-2 focus:ring-inset ring-[var(--text-base)] focus:ring-[var(--primary-color)] sm:text-sm sm:leading-6 focus:outline-none bg-[var(--surface-secondary)]"
+              placeholder="Name"
+              {...register('name')}
+            />
+            {errors.name && <span>{errors.name.message}</span>}
+          </div>
+
+          <div className="flex flex-col">
+            <input
+              type="email"
+              className="block w-full rounded-md border-0 px-2 py-1.5 text-[var(--text-base)] shadow-md placeholder:text-[var(--text-secondary)] focus:ring-2 focus:ring-inset ring-[var(--text-base)] focus:ring-[var(--primary-color)] sm:text-sm sm:leading-6 focus:outline-none bg-[var(--surface-secondary)]"
+              placeholder="E-mail"
+              {...register('email')}
+            />
+            {errors.email && <span>{errors.email.message}</span>}
+          </div>
+          <div className="flex flex-col">
+            <textarea
+              rows={5}
+              cols={30}
+              placeholder="Your message"
+              className="block w-full rounded-md border-0 px-2 py-1.5 text-[var(--text-base)] shadow-md placeholder:text-[var(--text-secondary)] focus:ring-2 focus:ring-inset ring-[var(--text-base)] focus:ring-[var(--primary-color)] sm:text-sm sm:leading-6 focus:outline-none bg-[var(--surface-secondary)]"
+              {...register('message')}
+            />
+            {errors.message && <span>{errors.message.message}</span>}
+          </div>
+
           <CustomButton
             type="submit"
             text="Send me a message"
-            icon={<BsArrowRight className='ml-2 w-5'/>}
+            icon={<BsArrowRight className="ml-2 w-5" />}
             color="violet"
-            onSubmit={handleSubmitSendMessage}
-            customCss='!w-[13rem] !text-sm !font-normal'
+            customCss="!w-[13rem] !text-sm !font-normal"
           />
         </form>
       </div>

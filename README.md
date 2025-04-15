@@ -17,6 +17,23 @@ This is my personal portfolio built with modern web technologies like **Next.js*
 - 🧱 MUI (Material UI)
 - 🔁 GitHub Actions (CI/CD)
 
+
+## 🧰 Features
+
+- Responsive design (mobile-first)
+
+- Smooth animations with Framer Motion
+
+- Dark and light theme support
+
+- Form validation with React Hook Form + Zod
+
+- Toast notifications
+
+- GitHub Actions for automated deployment
+
+- Custom fonts via next/font
+
 ## 📦 Getting Started
 
 First, clone the repository:
@@ -44,22 +61,6 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-## 🧰 Features
-
-- Responsive design (mobile-first)
-
-- Smooth animations with Framer Motion
-
-- Dark and light theme support
-
-- Form validation with React Hook Form + Zod
-
-- Toast notifications
-
-- GitHub Actions for automated deployment
-
-- Custom fonts via next/font
 
 
 ## 🚀 Deployment

@@ -4,7 +4,7 @@ import ProjectCardWrapper from '../ui/ProjectCard/ProjectCardWrapper'
 function Projects() {
   return (
     <section
-      className="flex flex-col justify-center items-center 2xl:w-[83rem] xl:w-[70rem] lg:w-[55rem] md:w-[39rem] sm:w-[23rem] xs:w-[23rem] mx-auto mb-[7rem]"
+      className="flex flex-col justify-center items-center 2xl:w-[83rem] xl:w-[70rem] lg:w-[55rem] md:w-[39rem] sm:w-[23rem] xs:w-[23rem] mx-auto mb-[7rem] "
       id="projects"
     >
       <h2 className="text-[var(--secondary-color)] font-semibold text-3xl mb-18">

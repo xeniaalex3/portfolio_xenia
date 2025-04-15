@@ -36,7 +36,7 @@ function Contact() {
 
       reset()
     } catch (error) {
-      console.error('Erro ao enviar a mensagem:', error)
+      console.error(error)
       toast.error('An error occurred while sending the message. Please try again.')
     }
   }
@@ -77,14 +77,14 @@ function Contact() {
             className="p-2 bg-[var(--surface-secondary)] border border-transparent hover:border-[var(--secondary-color)] rounded-lg w-[3.8rem] h-[2.5rem] flex flex-row justify-center items-center"
             target="_blank"
           >
-            <IoLogoLinkedin size={24} />
+            <IoLogoLinkedin size={24} className='text-[var(--text-base)]'/>
           </Link>
           <Link
             href="https://github.com/xeniaalex3"
             className="p-2 bg-[var(--surface-secondary)] border border-transparent hover:border-[var(--secondary-color)] rounded-lg w-[3.8rem] h-[2.5rem] flex flex-row justify-center items-center"
             target="_blank"
           >
-            <IoLogoGithub size={24} />
+            <IoLogoGithub size={24} className='text-[var(--text-base)]'/>
           </Link>
         </div>
       </div>
@@ -96,7 +96,7 @@ function Contact() {
           <div className="flex flex-col">
             <input
               type="text"
-              className="block w-full rounded-md border-0 px-2 py-1.5 text-[var(--text-base)] shadow-md placeholder:text-[var(--text-secondary)] focus:ring-2 focus:ring-inset ring-[var(--text-base)] focus:ring-[var(--primary-color)] sm:text-sm sm:leading-6 focus:outline-none bg-[var(--surface-secondary)]"
+              className="block w-full rounded-md border-0 px-2 py-1.5 text-[var(--text-base)] shadow-md placeholder:text-[var(--text-base)] focus:ring-2 focus:ring-inset ring-[var(--text-base)] focus:ring-[var(--primary-color)] sm:text-sm sm:leading-6 focus:outline-none bg-[var(--surface-secondary)]"
               placeholder="Name"
               {...register('name')}
             />
@@ -106,7 +106,7 @@ function Contact() {
           <div className="flex flex-col">
             <input
               type="email"
-              className="block w-full rounded-md border-0 px-2 py-1.5 text-[var(--text-base)] shadow-md placeholder:text-[var(--text-secondary)] focus:ring-2 focus:ring-inset ring-[var(--text-base)] focus:ring-[var(--primary-color)] sm:text-sm sm:leading-6 focus:outline-none bg-[var(--surface-secondary)]"
+              className="block w-full rounded-md border-0 px-2 py-1.5 text-[var(--text-base)] shadow-md placeholder:text-[var(--text-base)] focus:ring-2 focus:ring-inset ring-[var(--text-base)] focus:ring-[var(--primary-color)] sm:text-sm sm:leading-6 focus:outline-none bg-[var(--surface-secondary)]"
               placeholder="E-mail"
               {...register('email')}
             />
@@ -117,7 +117,7 @@ function Contact() {
               rows={5}
               cols={30}
               placeholder="Your message"
-              className="block w-full rounded-md border-0 px-2 py-1.5 text-[var(--text-base)] shadow-md placeholder:text-[var(--text-secondary)] focus:ring-2 focus:ring-inset ring-[var(--text-base)] focus:ring-[var(--primary-color)] sm:text-sm sm:leading-6 focus:outline-none bg-[var(--surface-secondary)]"
+              className="block w-full rounded-md border-0 px-2 py-1.5 text-[var(--text-base)] shadow-md placeholder:text-[var(--text-base)] focus:ring-2 focus:ring-inset ring-[var(--text-base)] focus:ring-[var(--primary-color)] sm:text-sm sm:leading-6 focus:outline-none bg-[var(--surface-secondary)]"
               {...register('message')}
             />
             {errors.message && <span>{errors.message.message}</span>}

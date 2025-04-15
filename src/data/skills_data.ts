@@ -110,7 +110,7 @@ export const SkillsDataToolsJson = [
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg",
   },
   {
-    title: "GitHub Actions",
+    title: "GH Actions",
     imageLink:
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubactions/githubactions-original.svg",
   },

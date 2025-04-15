@@ -8,13 +8,12 @@ function TextInput({ type = "text",
   customCss,
   value,
   setValue,
-  required = false,}:TextInputProps ){
+ }:TextInputProps ){
   return(
     <div className="mb-4">
     {label && (
       <label htmlFor={id} className={clsx("block text-md font-medium leading-6 text-black-700 mt-4", customCss)}>
         {label}
-        {required && <span className="text-red-600"> *</span>}
       </label>
     )}
     <div className="mt-2">
@@ -26,7 +25,6 @@ function TextInput({ type = "text",
         placeholder={placeholder}
         value={value}
         onChange={setValue}
-        required={required}
       />
     </div>
   </div>

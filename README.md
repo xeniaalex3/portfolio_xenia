@@ -67,3 +67,12 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 This project is deployed on Netlify, but you can also deploy it to Vercel, GitHub Pages, or any other platform.
 
+## 🎨 Layout 
+
+<p align="center">
+<img width='80%' height='80%' src="./src/assets/image/layout_dark.png" alt="Next Level Week feedback Logo"/></p>
+
+<br><br>
+<p align="center">
+<img width='80%' height='80%' src="./src/assets/image/layout_light.png" alt="Next Level Week feedback Logo"/></p>
+

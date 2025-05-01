@@ -2,7 +2,7 @@
 
 This is my personal portfolio built with modern web technologies like **Next.js**, **TypeScript**, and **Tailwind CSS**. It showcases my projects, skills, and experience in a clean and responsive interface.
 
-🔗 Live demo: [xeniadev.netlify.app](https://xeniadev.netlify.app/)
+🔗 Live demo: [portfolio](https://xeniadev.netlify.app/)
 
 ## 🚀 Technologies
 

@@ -57,9 +57,16 @@ function DetailsProject({ project }: ProjectProps) {
           <p className="text-base font-medium text-[var(--text-secondary)] xl:w-[60%] lg:w-[60%] md:w-[70%] sm:w-[90%] mb-6">
             {project.description}
           </p>
-
           <h3 className="text-lg font-semibold text-[var(--text-primary)] mb-2 sm:mb-4">
-            Technologies used :
+            Features :
+          </h3>
+          <ul className='text-base font-medium text-[var(--text-secondary)] list-disc list-inside mb-6 space-y-1 '>
+          {project.features.map(item => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+          <h3 className="text-lg font-semibold text-[var(--text-primary)] mb-2 sm:mb-4">
+            Technologies :
           </h3>
           <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 md:gap-4 sm:grid-cols-2 sm:place-items-center sm:gap-4">
             {project.technos.map(tech => (

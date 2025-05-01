@@ -9,6 +9,7 @@ export interface ProjectCardWrapperProps {
   github_link?: string;
   demo?: string;
   className?: string;
+  technos: string[];
 }
 
 export interface CardWrapperProps {
@@ -27,4 +28,5 @@ export interface DetailProjectProps {
   technos: string[];
   github_link?: string;
   demo?: string;
+  features: string[];
 }

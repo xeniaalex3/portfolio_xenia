@@ -3,7 +3,7 @@ name: Deploy Netlify
 on: 
   push:
     branches:
-      - form-contact
+      - page_detail_update
 permissions:
   contents: write
   pull-requests: write

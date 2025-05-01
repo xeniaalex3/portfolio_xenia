@@ -27,7 +27,7 @@ function ProjectCardWrapper({
   const handleDetailsClick = () => router.push(`/projects/${id}`)
 
   return (
-    <div className="flex flex-col xl:w-[26rem] xl:h-[32rem] lg:w-[26rem] lg:h-[25rem] md:w-[26rem] md:h-[25rem] xs:w-[23rem] bg-[var(--surface-secondary)] rounded-lg shadow-lg cursor-pointer border border-transparent hover:border-[var(--secondary-color)]">
+    <div className="flex flex-col xl:w-[26rem] xl:h-[32rem] lg:w-[26rem] lg:h-[25rem] md:w-[26rem] md:h-[25rem] xs:w-[22rem] bg-[var(--surface-secondary)] rounded-lg shadow-lg cursor-pointer border border-transparent hover:border-[var(--secondary-color)]">
       {/* Image Wrapper */}
       <div className="w-full h-full overflow-hidden box-border">
         <Image
@@ -47,7 +47,7 @@ function ProjectCardWrapper({
         <h3 className="text-base font-medium text-[var(--text-base)] mb-3">
           Technologies :
         </h3>
-        <div className="flex flex-row justify-start items-center gap-2 mb-2">
+        <div className="flex md:flex-row xs:flex-wrap  justify-start items-center gap-2 mb-2">
           {technos?.slice(0, 3).map((tech, index) => (
             <span
               key={index}
@@ -57,13 +57,13 @@ function ProjectCardWrapper({
             </span>
           ))}
           {technos && technos.length > 3 && (
-            <span className="text-sm text-[var(--text-base)] ml-2">
+            <span className="text-sm text-[var(--text-base)] md:ml-2 xs:ml-1">
               +{technos.length - 3} more
             </span>
           )}
         </div>
         <hr className="my-2 border-t border-[var(--text-base)]" />
-        <div className="flex flex-row gap-4 mt-2">
+        <div className="flex md:flex-row xs:flex-wrap gap-4 mt-2">
           <CustomButton
             text="Github"
             color="violet"

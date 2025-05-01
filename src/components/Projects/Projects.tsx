@@ -23,6 +23,7 @@ function Projects() {
               className='h-[60%]'
               github_link={item.github_link}
               demo={item.demo}
+              technos={item.technos}
             />
           )
         })}

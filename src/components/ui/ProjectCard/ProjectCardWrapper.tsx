@@ -1,13 +1,13 @@
-"use client";
+'use client'
 
-import Image from "next/image";
-import { ProjectCardWrapperProps } from "@/@types/wrapper";
-import CustomButton from "../Form/Button/CustomButton";
-import { IoLogoGithub } from "react-icons/io";
-import { RiShareBoxFill } from "react-icons/ri";
-import { HiViewGridAdd } from "react-icons/hi";
+import Image from 'next/image'
+import { ProjectCardWrapperProps } from '@/@types/wrapper'
+import CustomButton from '../Form/Button/CustomButton'
+import { IoLogoGithub } from 'react-icons/io'
+import { RiShareBoxFill } from 'react-icons/ri'
+import { HiViewGridAdd } from 'react-icons/hi'
 import { StaticImageData } from 'next/image'
-import { useRouter } from "next/navigation";
+import { useRouter } from 'next/navigation'
 
 function ProjectCardWrapper({
   id,
@@ -18,15 +18,16 @@ function ProjectCardWrapper({
   className,
   github_link,
   demo,
+  technos
 }: ProjectCardWrapperProps) {
-  const router = useRouter();
+  const router = useRouter()
 
-  const handleGithubClick = () => window.open(github_link, "_blank");
-  const handleDemoClick = () => window.open(demo, "_blank");
-  const handleDetailsClick = () => router.push(`/projects/${id}`);
+  const handleGithubClick = () => window.open(github_link, '_blank')
+  const handleDemoClick = () => window.open(demo, '_blank')
+  const handleDetailsClick = () => router.push(`/projects/${id}`)
 
   return (
-    <div className="flex flex-col xl:w-[26rem] xl:h-[25rem] lg:w-[26rem] lg:h-[25rem] md:w-[26rem] md:h-[25rem] xs:w-[23rem] bg-[var(--surface-secondary)] rounded-lg shadow-lg cursor-pointer border border-transparent hover:border-[var(--secondary-color)]">
+    <div className="flex flex-col xl:w-[26rem] xl:h-[32rem] lg:w-[26rem] lg:h-[25rem] md:w-[26rem] md:h-[25rem] xs:w-[23rem] bg-[var(--surface-secondary)] rounded-lg shadow-lg cursor-pointer border border-transparent hover:border-[var(--secondary-color)]">
       {/* Image Wrapper */}
       <div className="w-full h-full overflow-hidden box-border">
         <Image
@@ -40,8 +41,29 @@ function ProjectCardWrapper({
 
       {/* Content Wrapper */}
       <div className="flex flex-col px-4 py-4.5">
-        <h3 className="text-lg font-semibold text-[var(--text-base)] mb-3">{title}</h3>
-        <div className="flex flex-row gap-4">
+        <h3 className="text-lg font-semibold text-[var(--text-base)] mb-3">
+          {title}
+        </h3>
+        <h3 className="text-base font-medium text-[var(--text-base)] mb-3">
+          Technologies :
+        </h3>
+        <div className="flex flex-row justify-start items-center gap-2 mb-2">
+          {technos?.slice(0, 3).map((tech, index) => (
+            <span
+              key={index}
+              className="bg-[var(--surface-primary)] text-[var(--text-base)] text-sm px-3 py-2 rounded-lg"
+            >
+              {tech}
+            </span>
+          ))}
+          {technos && technos.length > 3 && (
+            <span className="text-sm text-[var(--text-base)] ml-2">
+              +{technos.length - 3} more
+            </span>
+          )}
+        </div>
+        <hr className="my-2 border-t border-[var(--text-base)]" />
+        <div className="flex flex-row gap-4 mt-2">
           <CustomButton
             text="Github"
             color="violet"
@@ -69,7 +91,7 @@ function ProjectCardWrapper({
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default ProjectCardWrapper;
+export default ProjectCardWrapper

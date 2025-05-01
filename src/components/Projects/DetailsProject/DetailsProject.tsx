@@ -28,18 +28,18 @@ function DetailsProject({ project }: ProjectProps) {
 
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <section className="flex flex-col mx-auto xl:w-[75rem] md:w-[35rem] lg:w-[50rem] sm:w-[25rem] sm:mx-auto">
+      <section className="flex flex-col mx-auto xl:w-[75rem] md:w-[35rem] lg:w-[50rem] sm:w-[25rem] xs:w-[22rem]">
         <CustomButton
           type="button"
           text="Back"
           icon={<FaArrowLeft className="ml-2 w-5" />}
           color="violet"
           onClick={handelBackClick}
-          customCss="md:!w-[6rem] !text-sm !font-normal mt-4 sm:w-[5rem] sm:text-xs sm:font-light"
+          customCss="md:!w-[6rem] !text-sm !font-normal mt-4 xs:w-[5rem] xs:text-xs sm:font-light"
         />
 
         <div key={project.id} className="mt-[6rem]">
-          <div className=" lg:max-w-[40%] md:max-w-[80%] sm:w-[95%] h-auto overflow-hidden rounded-lg shadow-lg box-border mb-6">
+          <div className=" lg:max-w-[40%] md:max-w-[80%] sm:w-[95%] xs:w-[100%] h-auto overflow-hidden rounded-lg shadow-lg box-border mb-6">
             <Image
               src={project.image}
               alt={project.title}
@@ -51,24 +51,21 @@ function DetailsProject({ project }: ProjectProps) {
           <h2 className="text-2xl font-semibold text-[var(--primary-color)] mb-4">
             {project.title}
           </h2>
-          <h3 className="text-lg font-semibold text-[var(--text-primary)] mb-4">
-            Description :
-          </h3>
           <p className="text-base font-medium text-[var(--text-secondary)] xl:w-[60%] lg:w-[60%] md:w-[70%] sm:w-[90%] mb-6">
             {project.description}
           </p>
-          <h3 className="text-lg font-semibold text-[var(--text-primary)] mb-2 sm:mb-4">
+          <h3 className="text-lg font-semibold text-[var(--text-primary)] mb-2 xs:mb-4">
             Features :
           </h3>
-          <ul className='text-base font-medium text-[var(--text-secondary)] list-disc list-inside mb-6 space-y-1 '>
-          {project.features.map(item => (
+          <ul className="text-base font-medium text-[var(--text-secondary)] list-disc list-inside mb-6 space-y-1 ">
+            {project.features.map(item => (
               <li key={item}>{item}</li>
             ))}
           </ul>
-          <h3 className="text-lg font-semibold text-[var(--text-primary)] mb-2 sm:mb-4">
+          <h3 className="text-lg font-semibold text-[var(--text-primary)] mb-2 xs:mb-4">
             Technologies :
           </h3>
-          <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 md:gap-4 sm:grid-cols-2 sm:place-items-center sm:gap-4">
+          <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 md:gap-2 xs:grid-cols-2 xs:place-items-center xs:gap-4">
             {project.technos.map(tech => (
               <MagicButton key={tech} title={tech} />
             ))}

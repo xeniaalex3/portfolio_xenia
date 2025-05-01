@@ -28,7 +28,7 @@ function DetailsProject({ project }: ProjectProps) {
 
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <section className="flex flex-col mx-auto xl:w-[75rem] md:w-[35rem] lg:w-[50rem] sm:w-[25rem] xs:w-[22rem]">
+      <section className="flex flex-col mx-auto xl:w-[75rem] md:w-[39rem] lg:w-[58rem] sm:w-[25rem] xs:w-[22rem]">
         <CustomButton
           type="button"
           text="Back"
@@ -39,7 +39,7 @@ function DetailsProject({ project }: ProjectProps) {
         />
 
         <div key={project.id} className="mt-[6rem]">
-          <div className=" lg:max-w-[40%] md:max-w-[80%] sm:w-[95%] xs:w-[100%] h-auto overflow-hidden rounded-lg shadow-lg box-border mb-6">
+          <div className=" lg:max-w-[70%] md:max-w-[100%] sm:w-[95%] xs:w-[100%] h-auto overflow-hidden rounded-lg shadow-lg box-border mb-6">
             <Image
               src={project.image}
               alt={project.title}

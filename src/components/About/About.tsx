@@ -3,7 +3,7 @@ import Image from 'next/image'
 function About() {
   return (
     <section
-      className="2xl:w-[83rem] xl:w-[70rem] lg:w-[55rem] xl:h-[27rem] lg:h-[27rem] md:w-[39rem] md:h-[63rem] sm:w-[23rem] xs:w-[22rem] sm:h-[63rem] xs:h-[50rem] bg-[var(--surface-primary)] mx-auto md:mt-[13rem] xs:mt-[10rem] mb-[7rem] flex items-center lg:justify-between md:justify-evenly shadow-lg rounded-lg md:flex-col-reverse lg:flex-row xl:flex-row sm:flex-col-reverse xs:flex-col-reverse"
+      className="2xl:w-[83rem] xl:w-[70rem] lg:w-[58rem] xl:h-[27rem] lg:h-[31rem] md:w-[39rem] md:h-[52rem] sm:w-[23rem] xs:w-[22rem] sm:h-[63rem] xs:h-[50rem] bg-[var(--surface-primary)] mx-auto md:mt-[13rem] xs:mt-[10rem] mb-[7rem] flex items-center lg:justify-between md:justify-evenly shadow-lg rounded-lg md:flex-col-reverse lg:flex-row xl:flex-row sm:flex-col-reverse xs:flex-col-reverse"
       id="about"
     >
       <div className="flex justify-center w-2/5 md:mb-0 xs:mb-4 md:mt-0 xs:mt-2">

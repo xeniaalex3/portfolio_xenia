@@ -1,35 +1,35 @@
-import { StaticImageData } from "next/image";
+import { StaticImageData } from 'next/image'
 
 export interface ProjectCardWrapperProps {
-  id: number;
-  image?: StaticImageData;
-  title?: string;
-  width?: number;
-  height?: number;
-  github_link?: string;
-  demo?: string;
-  className?: string;
-  technos: string[];
+  id: number
+  image?: StaticImageData
+  title?: string
+  width?: number
+  height?: number
+  github_link?: string
+  demo?: string
+  className?: string
+  technos: string[]
 }
 
 export interface CardWrapperProps {
-  imageSrc?: string;
-  text?: string;
-  width?: number;
-  height?: number;
-  className?: string;
+  imageSrc?: string
+  text?: string
+  width?: number
+  height?: number
+  className?: string
 }
 
 export interface DetailProjectProps {
-  id: number | string;
-  title: string;
-  description?: string;
-  image: StaticImageData;
-   technos: {
-    frontend: string[];
-    backend: string[];
-  };
-  github_link?: string;
-  demo?: string;
-  features: string[];
+  id: number | string
+  title: string
+  description?: string
+  image: StaticImageData
+  technos: {
+    frontend: string[]
+    backend?: string[]
+  }
+  github_link?: string
+  demo?: string
+  features: string[]
 }

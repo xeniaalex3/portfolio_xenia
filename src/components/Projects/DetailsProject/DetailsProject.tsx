@@ -54,7 +54,7 @@ function DetailsProject({ project }: ProjectProps) {
           <p className="text-base font-medium text-[var(--text-secondary)] xl:w-[60%] lg:w-[60%] md:w-[70%] sm:w-[90%] mb-6">
             {project.description}
           </p>
-          <h3 className="text-lg font-semibold text-[var(--text-primary)] mb-2 xs:mb-4">
+          <h3 className="text-lg font-semibold text-[var(--primary-color)] mb-2 xs:mb-4">
             Features :
           </h3>
           <ul className="text-base font-medium text-[var(--text-secondary)] list-disc list-inside mb-6 space-y-1 ">
@@ -62,14 +62,29 @@ function DetailsProject({ project }: ProjectProps) {
               <li key={item}>{item}</li>
             ))}
           </ul>
-          <h3 className="text-lg font-semibold text-[var(--text-primary)] mb-2 xs:mb-4">
+          <h3 className="text-lg font-semibold text-[var(--primary-color)] mb-2 xs:mb-4">
             Technologies :
           </h3>
-          <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 md:gap-2 xs:grid-cols-2 xs:place-items-center xs:gap-4">
-            {project.technos.map(tech => (
+          <h4 className="text-base font-semibold text-[var(--text-primary)] mb-2 xs:mb-4">
+            Frontend :
+          </h4>
+          <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 md:gap-2 xs:grid-cols-2 xs:place-items-center xs:gap-4 mb-6">
+            {project.technos.frontend.map(tech => (
               <MagicButton key={tech} title={tech} />
             ))}
           </div>
+          {project.technos.backend && project.technos.backend.length > 0 && (
+            <>
+             <h4 className="text-base font-semibold text-[var(--text-primary)] mb-2 xs:mb-4">
+            Backend :
+          </h4>
+          <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 md:gap-2 xs:grid-cols-2 xs:place-items-center xs:gap-4 mb-6">
+            {project.technos.backend.map(tech => (
+              <MagicButton key={tech} title={tech} />
+            ))}
+          </div>
+            </>
+          )}
           <hr className="my-10 border-t border-[var(--text-secondary)]" />
           <div className="flex md:flex-row md:justify-start gap-4 mt-8 mb-8 sm:flex sm:flex-row sm:justify-center sm:items-center">
             <CustomButton

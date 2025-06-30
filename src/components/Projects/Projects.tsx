@@ -20,7 +20,7 @@ function Projects() {
               image={item.image}
               width={500}
               height={600}
-              className='h-[60%]'
+              className={item.className ? 'object-fill' : 'object-cover'}
               github_link={item.github_link}
               demo={item.demo}
               technos={item.technos}

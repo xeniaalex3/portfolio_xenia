@@ -35,7 +35,7 @@ function ProjectCardWrapper({
           alt={title as string}
           width={width}
           height={height}
-          className={`w-full h-full object-fill ${className}`}
+          className={`${className} w-full h-full`}
         />
       </div>
 

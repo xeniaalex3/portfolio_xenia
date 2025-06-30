@@ -25,7 +25,10 @@ export interface DetailProjectProps {
   title: string;
   description?: string;
   image: StaticImageData;
-  technos: string[];
+   technos: {
+    frontend: string[];
+    backend: string[];
+  };
   github_link?: string;
   demo?: string;
   features: string[];

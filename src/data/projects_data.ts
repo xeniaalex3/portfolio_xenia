@@ -16,7 +16,9 @@ export const ProjectsData = [
       'Nest.js',
       'Prisma',
       'PostgreSQL',
-      'Tailwind CSS'
+      'Tailwind CSS',
+      'CI/CD',
+      'Github Actions'
     ]
   },
   {
@@ -59,7 +61,7 @@ export const ProjectDetailsData = [
     id: 1,
     title: 'PlannTrip',
     description:
-      "Le plannTrip est une application web destinée à faciliter l'organisation de voyages en groupe. Dotée d'une interface intuitive et moderne, elle permet aux utilisateurs de créer des plans de voyage personnalisés, de choisir des destinations, de fixer des dates et d'inviter des amis par e-mail à collaborer à l'organisation.",
+      "Le PlannTrip est une application web destiné à faciliter l'organisation de voyages en groupe. Dotée d'une interface intuitive et moderne, elle permet aux utilisateurs de créer des plans de voyage personnalisés, de choisir des destinations, de fixer des dates et d'inviter des amis par e-mail à collaborer à l'organisation.",
     image: image1,
     features: [
       'Création de voyages avec titre, dates et destinations',
@@ -75,7 +77,9 @@ export const ProjectDetailsData = [
         'TypeScript',
         'Tailwind CSS',
         'React-Toastify',
-        'React-Router'
+        'React-Router',
+        'CI/CD',
+        'Github Actions'
       ],
       backend: ['Nest.js', 'TypeScript', 'Prisma', 'PostgreSQL']
     },

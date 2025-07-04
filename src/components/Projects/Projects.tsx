@@ -10,7 +10,7 @@ function Projects() {
       <h2 className="text-[var(--secondary-color)] font-semibold text-3xl mb-18">
         Projects
       </h2>
-      <div className="grid 2xl:grid-cols-3 xl:grid-cols-2 lg:grid-cols-2 xl:gap-x-10 lg:gap-x-18 md:grid-cols-1 lg:gap-y-0 md:gap-y-16 sm:gap-y-16 xs:gap-y-16">
+      <div className="grid 2xl:grid-cols-3 xl:grid-cols-2 lg:grid-cols-2 xl:gap-x-10 lg:gap-x-18 md:grid-cols-1 lg:gap-y-8 md:gap-y-16 sm:gap-y-16 xs:gap-y-16">
         {ProjectsData.map(item => {
           return (
             <ProjectCardWrapper

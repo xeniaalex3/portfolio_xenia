@@ -2,7 +2,7 @@ import image1 from '@/assets/image/planntrip3.png'
 import image2 from '@/assets/image/feedback1.png'
 import image3 from '@/assets/image/esports.png'
 
-console.log(image1);
+console.log(image1)
 export const ProjectsData = [
   {
     id: 1,
@@ -13,10 +13,10 @@ export const ProjectsData = [
     technos: [
       'React.js',
       'TypeScript',
-      'Tailwind CSS',
       'Nest.js',
       'Prisma',
-      'PostgreSQL'
+      'PostgreSQL',
+      'Tailwind CSS'
     ]
   },
   {
@@ -46,8 +46,8 @@ export const ProjectsData = [
     technos: [
       'React.js',
       'TypeScript',
-      'Tailwind CSS',
       'React Native',
+      'Tailwind CSS',
       'Expo',
       'Radix UI'
     ]

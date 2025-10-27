@@ -30,6 +30,7 @@ export interface DetailProjectProps {
     backend?: string[]
   }
   github_link?: string
+  backend_repo?: string
   demo?: string
   features: string[]
 }

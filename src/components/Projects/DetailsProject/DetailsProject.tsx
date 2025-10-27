@@ -23,6 +23,8 @@ function DetailsProject({ project }: ProjectProps) {
 
   const handleGithubClick = () =>
     project?.github_link && window.open(project.github_link, '_blank')
+  const handleBackendRepoClick = () =>
+    project?.backend_repo && window.open(project.backend_repo, '_blank')
   const handleDemoClick = () =>
     project?.demo && window.open(project.demo, '_blank')
 
@@ -95,6 +97,16 @@ function DetailsProject({ project }: ProjectProps) {
               customCss="!w-[6.5rem] !h-[2.5rem]"
               onClick={handleGithubClick}
             />
+            {project.backend_repo && (
+              <CustomButton
+                text="Backend"
+                color="violet"
+                type="button"
+                icon={<IoLogoGithub className="ml-2 w-5" />}
+                customCss="!w-[6.9rem] !h-[2.5rem]"
+                onClick={handleBackendRepoClick}
+              />
+            )}
             <CustomButton
               text="Live"
               color="violet"

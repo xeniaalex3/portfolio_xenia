@@ -4,7 +4,7 @@ import { clsx } from "clsx";
 export interface CustomButtonProps {
   full?: boolean;
   text?: string; 
-  onClick?: () => void; 
+  onClick?: (event: React.MouseEvent) => void; 
   type?: "button" | "submit";
   disabled?: boolean;
   customCss?: string;

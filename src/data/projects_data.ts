@@ -2,7 +2,7 @@ import image1 from '@/assets/image/planntrip3.png'
 import image2 from '@/assets/image/feedback1.png'
 import image3 from '@/assets/image/esports.png'
 
-console.log(image1)
+
 export const ProjectsData = [
   {
     id: 1,
@@ -84,6 +84,7 @@ export const ProjectDetailsData = [
       backend: ['Nest.js', 'TypeScript', 'Prisma', 'PostgreSQL']
     },
     github_link: 'https://github.com/xeniaalex3/PlannTrip',
+    backend_repo: 'https://github.com/xeniaalex3/PlannTrip_backend',
     demo: 'https://planntrip.netlify.app/'
   },
   {
@@ -140,6 +141,7 @@ export const ProjectDetailsData = [
     },
 
     github_link: 'https://github.com/xeniaalex3/eSports',
+    backend_repo: 'https://github.com/xeniaalex3/eSposts-server',
     demo: 'https://e-sports-phi.vercel.app/'
   }
 ]

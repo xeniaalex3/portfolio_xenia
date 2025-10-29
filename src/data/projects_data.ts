@@ -18,7 +18,9 @@ export const ProjectsData = [
       'PostgreSQL',
       'Tailwind CSS',
       'CI/CD',
-      'Github Actions'
+      'Github Actions',
+      'Docker',
+      'Docker compose'
     ]
   },
   {
@@ -81,7 +83,7 @@ export const ProjectDetailsData = [
         'CI/CD',
         'Github Actions'
       ],
-      backend: ['Nest.js', 'TypeScript', 'Prisma', 'PostgreSQL']
+      backend: ['Nest.js', 'TypeScript', 'Prisma', 'PostgreSQL', 'Docker', 'Docker compose']
     },
     github_link: 'https://github.com/xeniaalex3/PlannTrip',
     backend_repo: 'https://github.com/xeniaalex3/PlannTrip_backend',

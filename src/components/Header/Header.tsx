@@ -18,9 +18,9 @@ function Header() {
         <Image
           src={logo}
           alt="image logo"
-          width={70}
-          height={70}
-          className="sm:w-[70px] sm:h-[28px] md:w-[70px] md:h-[70px]"
+          width={50}
+          height={50}
+          className="sm:w-[50px] sm:h-[28px] md:w-[50px] md:h-[50px]"
         />
       </Link>
 

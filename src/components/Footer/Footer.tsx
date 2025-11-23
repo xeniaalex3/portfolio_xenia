@@ -14,7 +14,7 @@ function Footer() {
  <footer className="flex flex-row justify-center items-center py-4">
       <div>
         <p className="font-light md:text-sm text-[var(--text-primary)] xs:text-xs">
-          © {year} - All rights reserved - Xenia Dev
+          © {year} - All rights reserved - Xenia Onescu
         </p>
       </div>
     </footer>

@@ -36,11 +36,10 @@ function ProjectCardWrapper({
 
   return (
     <div 
-      className="flex flex-col xl:w-[26rem] xl:h-[32rem] lg:w-[26rem] lg:h-[35rem] md:w-[39rem] md:h-[35rem] xs:w-[22rem] bg-[var(--surface-secondary)] rounded-lg shadow-lg cursor-pointer border border-transparent hover:border-[var(--secondary-color)]"
-      onClick={handleDetailsClick}
+      className="flex flex-col xl:w-[26rem] xl:h-[32rem] lg:w-[26rem] lg:h-[35rem] md:w-[39rem] md:h-[35rem] xs:w-[22rem] bg-[var(--surface-secondary)] rounded-lg shadow-lg border border-transparent hover:border-[var(--secondary-color)]"
     >
       {/* Image Wrapper */}
-      <div className="w-full h-full overflow-hidden box-border">
+      <div className="w-full h-full overflow-hidden box-border cursor-pointer ">
         <Image
           src={image as StaticImageData}
           alt={title as string}
@@ -75,30 +74,36 @@ function ProjectCardWrapper({
         </div>
         <hr className="my-2 border-t border-[var(--text-base)]" />
         <div className="flex md:flex-row xs:flex-wrap gap-4 mt-2">
-          <CustomButton
-            text="Github"
-            color="violet"
-            type="button"
-            icon={<IoLogoGithub className="ml-2 w-5" />}
-            customCss="!w-[6.5rem] !h-[2.5rem]"
-            onClick={handleGithubClick}
-          />
-          <CustomButton
-            text="Live"
-            color="violet"
-            type="button"
-            icon={<RiShareBoxFill className="ml-2 w-5" />}
-            onClick={handleDemoClick}
-            customCss="!w-[6.5rem] !h-[2.5rem]"
-          />
-          <CustomButton
-            text="Details"
-            color="violet"
-            type="button"
-            icon={<HiViewGridAdd className="ml-2 w-5" />}
-            customCss="!w-[6.5rem] !h-[2.5rem]"
-            onClick={handleDetailsClick}
-          />
+          {github_link && (
+            <CustomButton
+              text="Github"
+              color="violet"
+              type="button"
+              icon={<IoLogoGithub className="ml-2 w-5" />}
+              customCss="!w-[6.5rem] !h-[2.5rem]"
+              onClick={handleGithubClick}
+            />
+          )}
+          {demo && (
+            <CustomButton
+              text="Live"
+              color="violet"
+              type="button"
+              icon={<RiShareBoxFill className="ml-2 w-5" />}
+              onClick={handleDemoClick}
+              customCss="!w-[6.5rem] !h-[2.5rem]"
+            />
+          )}
+           {id !== 1 && (
+            <CustomButton
+              text="Details"
+              color="violet"
+              type="button"
+              icon={<HiViewGridAdd className="ml-2 w-5" />}
+              customCss="!w-[6.5rem] !h-[2.5rem]"
+              onClick={handleDetailsClick}
+            />
+            )}
         </div>
       </div>
     </div>

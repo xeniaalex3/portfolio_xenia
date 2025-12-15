@@ -1,0 +1,26 @@
+<svg width="100%" height="100%" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="500" height="500" fill="#000000"></rect>
+
+  <!-- Spinner -->
+  <circle cx="250" cy="250" r="110" fill="none" stroke="#9CA3AF" stroke-width="4" stroke-linecap="round" stroke-dasharray="170 60">
+    <animateTransform attributeName="transform" type="rotate" from="0 250 250" to="360 250 250" dur="3.2s" repeatCount="indefinite"></animateTransform>
+  </circle>
+
+  <!-- Text -->
+  <text x="250" y="250" text-anchor="middle" dominant-baseline="middle" fill="#F5F5F5" font-size="20" font-family="Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif" letter-spacing="1.2">
+    Coming soon
+    <tspan>
+      <animate attributeName="opacity" values="0;1;1;1" dur="1.5s" repeatCount="indefinite"></animate>
+      .
+    </tspan>
+    <tspan>
+      <animate attributeName="opacity" values="0;0;1;1" dur="1.5s" repeatCount="indefinite"></animate>
+      .
+    </tspan>
+    <tspan>
+      <animate attributeName="opacity" values="0;0;0;1" dur="1.5s" repeatCount="indefinite"></animate>
+      .
+    </tspan>
+  </text>
+</svg>

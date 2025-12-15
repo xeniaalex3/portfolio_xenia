@@ -24,11 +24,15 @@ function ProjectCardWrapper({
 
   const handleGithubClick = (e: React.MouseEvent) => {
     e.stopPropagation()
-    window.open(github_link, '_blank')
+    if (github_link) {
+      window.open(github_link, '_blank')
+    }
   }
   const handleDemoClick = (e: React.MouseEvent) => {
     e.stopPropagation()
-    window.open(demo, '_blank')
+    if (demo) {
+      window.open(demo, '_blank')
+    }
   }
   const handleDetailsClick = () => {
     router.push(`/projects/${id}`)
@@ -74,36 +78,30 @@ function ProjectCardWrapper({
         </div>
         <hr className="my-2 border-t border-[var(--text-base)]" />
         <div className="flex md:flex-row xs:flex-wrap gap-4 mt-2">
-          {github_link && (
-            <CustomButton
-              text="Github"
-              color="violet"
-              type="button"
-              icon={<IoLogoGithub className="ml-2 w-5" />}
-              customCss="!w-[6.5rem] !h-[2.5rem]"
-              onClick={handleGithubClick}
-            />
-          )}
-          {demo && (
-            <CustomButton
-              text="Live"
-              color="violet"
-              type="button"
-              icon={<RiShareBoxFill className="ml-2 w-5" />}
-              onClick={handleDemoClick}
-              customCss="!w-[6.5rem] !h-[2.5rem]"
-            />
-          )}
-           {id !== 1 && (
-            <CustomButton
-              text="Details"
-              color="violet"
-              type="button"
-              icon={<HiViewGridAdd className="ml-2 w-5" />}
-              customCss="!w-[6.5rem] !h-[2.5rem]"
-              onClick={handleDetailsClick}
-            />
-            )}
+          <CustomButton
+            text="Github"
+            color="violet"
+            type="button"
+            icon={<IoLogoGithub className="ml-2 w-5" />}
+            customCss="!w-[6.5rem] !h-[2.5rem]"
+            onClick={handleGithubClick}
+          />
+          <CustomButton
+            text="Live"
+            color="violet"
+            type="button"
+            icon={<RiShareBoxFill className="ml-2 w-5" />}
+            onClick={handleDemoClick}
+            customCss="!w-[6.5rem] !h-[2.5rem]"
+          />
+          <CustomButton
+            text="Details"
+            color="violet"
+            type="button"
+            icon={<HiViewGridAdd className="ml-2 w-5" />}
+            customCss="!w-[6.5rem] !h-[2.5rem]"
+            onClick={handleDetailsClick}
+          />
         </div>
       </div>
     </div>

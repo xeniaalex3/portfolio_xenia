@@ -77,11 +77,6 @@ export const ProjectsData = [
 ]
 
 export const ProjectDetailsData = [
-   {
-    id: 1,
-    title: 'Taskly',
-    image: image1,
-  },
   {
     id: 2,
     title: 'PlannTrip',

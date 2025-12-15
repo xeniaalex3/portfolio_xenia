@@ -24,13 +24,13 @@ export interface DetailProjectProps {
   id: number | string
   title: string
   description?: string
-  image?: StaticImageData
-  technos?: {
+  image: StaticImageData
+  technos: {
     frontend: string[]
     backend?: string[]
   }
   github_link?: string
   backend_repo?: string
   demo?: string
-  features?: string[]
+  features: string[]
 }

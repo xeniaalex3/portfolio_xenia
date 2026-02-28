@@ -1,25 +1,25 @@
 import image2 from '@/assets/image/plannTrip.png'
 import image3 from '@/assets/image/feedback1.png'
 import image4 from '@/assets/image/esports.png'
-import image1 from '@/assets/image/téléchargement.svg'
+// import image1 from '@/assets/image/téléchargement.svg'
 
 export const ProjectsData = [
-  {
-    id: 1,
-    title: 'Taskly',
-    image: image1,
-    technos: [
-      'Next.js',
-      'TypeScript',
-      'TanStack',
-      'Authentication',
-      'Prisma',
-      'PostgreSQL',
-      'Tailwind CSS',
-      'CI/CD',
-      'Github Actions'
-    ]
-  },
+  // {
+  //   id: 1,
+  //   title: 'Taskly',
+  //   image: image1,
+  //   technos: [
+  //     'Next.js',
+  //     'TypeScript',
+  //     'TanStack',
+  //     'Authentication',
+  //     'Prisma',
+  //     'PostgreSQL',
+  //     'Tailwind CSS',
+  //     'CI/CD',
+  //     'Github Actions'
+  //   ]
+  // },
   {
     id: 2,
     title: 'PlannTrip',

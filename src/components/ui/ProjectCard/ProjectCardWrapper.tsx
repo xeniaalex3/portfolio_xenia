@@ -13,14 +13,14 @@ function ProjectCardWrapper({
   id,
   title,
   image,
-  width,
-  height,
   className,
   github_link,
   demo,
   technos
 }: ProjectCardWrapperProps) {
   const router = useRouter()
+  const hasGithubLink = Boolean(github_link)
+  const hasDemoLink = Boolean(demo)
 
   const handleGithubClick = (e: React.MouseEvent) => {
     e.stopPropagation()
@@ -40,16 +40,16 @@ function ProjectCardWrapper({
 
   return (
     <div 
-      className="flex flex-col xl:w-[26rem] xl:h-[32rem] lg:w-[26rem] lg:h-[35rem] md:w-[39rem] md:h-[35rem] xs:w-[22rem] bg-[var(--surface-secondary)] rounded-lg shadow-lg border border-transparent hover:border-[var(--secondary-color)]"
+      className="flex flex-col xl:w-[26rem] xl:h-[30rem] lg:w-[26rem] lg:h-[35rem] md:w-[39rem] md:h-[35rem] xs:w-[22rem] bg-[var(--surface-secondary)] rounded-lg shadow-lg border border-transparent hover:border-[var(--secondary-color)]"
     >
       {/* Image Wrapper */}
-      <div className="w-full h-full overflow-hidden box-border cursor-pointer ">
+      <div className="relative w-full aspect-[16/10] overflow-hidden box-border cursor-pointer bg-[var(--surface-primary)]">
         <Image
           src={image as StaticImageData}
           alt={title as string}
-          width={width}
-          height={height}
-          className={`${className} w-full h-full`}
+          fill
+          sizes="(min-width: 1536px) 26rem, (min-width: 768px) 39rem, 22rem"
+          className={`${className ?? 'object-contain'} w-full h-full`}
         />
       </div>
 
@@ -80,19 +80,21 @@ function ProjectCardWrapper({
         <div className="flex md:flex-row xs:flex-wrap gap-4 mt-2">
           <CustomButton
             text="Github"
-            color="violet"
+            color={hasGithubLink ? 'violet' : 'gray'}
             type="button"
             icon={<IoLogoGithub className="ml-2 w-5" />}
             customCss="!w-[6.5rem] !h-[2.5rem]"
+            disabled={!hasGithubLink}
             onClick={handleGithubClick}
           />
           <CustomButton
             text="Live"
-            color="violet"
+            color={hasDemoLink ? 'violet' : 'gray'}
             type="button"
             icon={<RiShareBoxFill className="ml-2 w-5" />}
-            onClick={handleDemoClick}
             customCss="!w-[6.5rem] !h-[2.5rem]"
+            disabled={!hasDemoLink}
+            onClick={handleDemoClick}
           />
           <CustomButton
             text="Details"

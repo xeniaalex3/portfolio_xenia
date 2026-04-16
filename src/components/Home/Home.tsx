@@ -6,6 +6,9 @@ import { FaNode, FaReact } from 'react-icons/fa6'
 import { RiJavascriptFill, RiHtml5Fill } from 'react-icons/ri'
 import { SiNextdotjs, SiTailwindcss, SiMui, SiNestjs } from 'react-icons/si'
 import SparklesText from '@/components/ui/Sparkles/SparklesText'
+import Link from 'next/link'
+import { IoLogoLinkedin } from 'react-icons/io5'
+import { IoLogoGithub } from 'react-icons/io'
 
 function Home() {
   return (
@@ -30,6 +33,22 @@ function Home() {
           className="text-[var(--text-secondary)] text-base font-normal mt-3"
           text="Let's build something amazing together !"
         />
+        <div className="flex flex-row gap-2 mt-6">
+          <Link
+            href="https://www.linkedin.com/in/xenia-onescu/"
+            className="p-2 bg-[var(--surface-secondary)] border border-transparent hover:border-[var(--secondary-color)] rounded-lg w-[3.5rem] h-[2.5rem] flex flex-row justify-center items-center"
+            target="_blank"
+          >
+            <IoLogoLinkedin size={24} className="text-[var(--text-base)]" />
+          </Link>
+          <Link
+            href="https://github.com/xeniaalex3"
+            className="p-2 bg-[var(--surface-secondary)] border border-transparent hover:border-[var(--secondary-color)] rounded-lg w-[3.5rem] h-[2.5rem] flex flex-row justify-center items-center"
+            target="_blank"
+          >
+            <IoLogoGithub size={24} className="text-[var(--text-base)]" />
+          </Link>
+        </div>
       </div>
       <div className="relative lg:flex px-20 lg:h-[500px] h-[330px] w-[400px] flex-col items-center justify-center overflow-hidden md:hidden sm:hidden xs:hidden">
         <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300 bg-clip-text text-center lg:text-5xl text-5xl font-semibold leading-none text-transparent dark:from-white dark:to-black">

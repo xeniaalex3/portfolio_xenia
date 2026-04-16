@@ -18,9 +18,7 @@ function Projects() {
               id={item.id}
               title={item.title}
               image={item.image}
-              width={500}
-              height={600}
-              className={item.className ? 'object-fill' : 'object-cover'}
+              className="object-contain"
               github_link={item.github_link}
               demo={item.demo}
               technos={item.technos}

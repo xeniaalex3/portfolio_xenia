@@ -32,16 +32,22 @@ function CustomButton({
 
   switch (color) {
     case "violet":
-      colorCss = "bg-[var(--primary-color)] hover:bg-[var(--hover-primary-color)]";
+      colorCss = disabled
+        ? "bg-[var(--primary-color)]"
+        : "bg-[var(--primary-color)] hover:bg-[var(--hover-primary-color)]";
       break;
     case "green":
-      colorCss = "bg-[var(--secondary-color)] hover:bg-[var(--hover-secondary-color)]";
+      colorCss = disabled
+        ? "bg-[var(--secondary-color)]"
+        : "bg-[var(--secondary-color)] hover:bg-[var(--hover-secondary-color)]";
       break;
     case "gray":
-      colorCss = "bg-[var(--surface-tertiary)] hover:bg-[var(--surface-secondary)] cursor-default";
+      colorCss = "bg-[var(--surface-tertiary)]";
       break;
     default:
-      colorCss = "bg-[var(--primary-color)] hover:bg-[var(--hover-primary-color)]";
+      colorCss = disabled
+        ? "bg-[var(--primary-color)]"
+        : "bg-[var(--primary-color)] hover:bg-[var(--hover-primary-color)]";
       break;
   }
 
@@ -50,9 +56,11 @@ function CustomButton({
       // eslint-disable-next-line react/button-has-type
       type={type ?? "button"}
       className={clsx(
-        "cursor-pointer transition duration-300 px-6 py-2 text-[var(--text-base)] flex items-center justify-center rounded-lg shadow-md",
+        "transition duration-300 px-6 py-2 text-[var(--text-base)] flex items-center justify-center rounded-lg shadow-md",
+        disabled ? "cursor-not-allowed" : "cursor-pointer",
         full ? "w-full" : "px-6 py-2 md:w-full",
         colorCss,
+        disabled && "opacity-60 pointer-events-none",
         customCss,
         flexEnd && "justify-self-end w-fit self-end"
       )}

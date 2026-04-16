@@ -1,23 +1,21 @@
 import image2 from '@/assets/image/plannTrip.png'
 import image3 from '@/assets/image/feedback1.png'
 import image4 from '@/assets/image/esports.png'
-import image1 from '@/assets/image/téléchargement.svg'
+import image1 from '@/assets/image/FarmPilot_dashboard.png'
 
 export const ProjectsData = [
   {
     id: 1,
-    title: 'Taskly',
+    title: 'FarmPilot',
     image: image1,
     technos: [
-      'Next.js',
-      'TypeScript',
-      'TanStack',
-      'Authentication',
-      'Prisma',
-      'PostgreSQL',
+      'React.js',
       'Tailwind CSS',
-      'CI/CD',
-      'Github Actions'
+      'TanStack',
+      'React Hook Form',
+      'Authentication',
+      'Supabase',
+      'GitLab CI/CD'
     ]
   },
   {
@@ -78,21 +76,54 @@ export const ProjectsData = [
 
 export const ProjectDetailsData = [
   {
+    id: 1,
+    title: 'FarmPilot',
+    description:
+      'FarmPilot is an internal SaaS developed in a professional environment for an agricultural cooperative, designed to centralize contract and farm management. The platform enables tracking of harvest data (quantities, tonnage), management of crop species per exploitation, and visualization of soil mapping. It also supports collaboration across multiple business teams through advanced user role management. Built to handle complex domain requirements, the application delivers a secure, performant, and productivity-focused user experience.',
+    image: image1,
+    features: [
+      'Full management of agricultural contracts',
+      'Tracking of harvest data (quantities, tonnage)',
+      'Management of crop species by type of exploitation',
+      'Soil mapping visualization',
+      'Advanced user role management (multi-role business users)',
+      'Access to and management of user documentation',
+      'Autonomous management of multiple SaaS pages',
+      'Interface optimized for business teams',
+      'Secure access and data handling'
+    ],
+    technos: {
+      frontend: [
+        'React 19',
+        'Vite',
+        'Tailwind CSS',
+        'TanStack React Router',
+        'TanStack React Query',
+        'Zod',
+        'React-hook-form',
+        'Axios',
+        'GitLab CI/CD',
+        'Supabase'
+      ],
+      backend: ['PHP', 'Symfony', 'PostgreSQL', 'Docker', 'Docker compose']
+    }
+  },
+  {
     id: 2,
     title: 'PlannTrip',
     description:
-      'PlannTrip est une application web moderne dédiée à la planification de voyages, permettant aux utilisateurs d’organiser des séjours, gérer les participants, planifier des activités et partager des liens utiles. L’application intègre une authentification complète, des routes protégées et une interface responsive, offrant une expérience fluide, performante et orientée collaboration.',
+      'PlannTrip is a modern web application designed for travel planning, allowing users to organize trips, manage participants, schedule activities, and share useful resources. The application includes a complete authentication system, protected routes, and a responsive interface, delivering a smooth, performant, and collaboration-oriented user experience.',
     image: image2,
     features: [
-      'Création et gestion de voyages (destination, dates)',
-      'Ajout et gestion des participants',
-      'Planification des activités avec date et heure',
-      'Création, modification et suppression des activités',
-      'Partage de liens utiles liés au voyage',
-      'Authentification des utilisateurs (inscription et connexion)',
-      'Gestion du compte utilisateur (profil, mise à jour, suppression)',
-      'Routes protégées pour les utilisateurs authentifiés',
-      'Interface responsive (mobile et desktop)'
+      'Create and manage trips (destinations, dates)',
+      'Add and manage participants',
+      'Schedule activities with date and time',
+      'Create, update, and delete activities',
+      'Share useful links related to trips',
+      'User authentication (sign up and login)',
+      'User account management (profile, update, deletion)',
+      'Protected routes for authenticated users',
+      'Responsive interface (mobile and desktop)'
     ],
     technos: {
       frontend: [

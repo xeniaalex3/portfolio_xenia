@@ -2,10 +2,25 @@ import image2 from '@/assets/image/plannTrip.png'
 import image3 from '@/assets/image/feedback1.png'
 import image4 from '@/assets/image/esports.png'
 import image1 from '@/assets/image/farmpilot_present.png'
+import image5 from '@/assets/image/FarmSAV_dashboard2.png'
 
 export const ProjectsData = [
   {
     id: 1,
+    title: 'FarmSAV',
+    image: image5,
+    technos: [
+      'Next.js',
+      'Tailwind CSS',
+      'TanStack',
+      'React Hook Form',
+      'Authentication',
+      'Supabase',
+      'GitLab CI/CD'
+    ]
+  },
+  {
+    id: 2,
     title: 'FarmPilot',
     image: image1,
     technos: [
@@ -19,7 +34,7 @@ export const ProjectsData = [
     ]
   },
   {
-    id: 2,
+    id: 3,
     title: 'PlannTrip',
     image: image2,
     github_link: 'https://github.com/xeniaalex3/PlannTrip',
@@ -40,7 +55,7 @@ export const ProjectsData = [
     ]
   },
   {
-    id: 3,
+    id: 4,
     title: 'Feedback Widget',
     image: image3,
     github_link: 'https://github.com/xeniaalex3/Feedback-Widget',
@@ -58,7 +73,7 @@ export const ProjectsData = [
     ]
   },
   {
-    id: 4,
+    id: 5,
     title: 'eSports',
     image: image4,
     github_link: 'https://github.com/xeniaalex3/eSports',
@@ -77,6 +92,42 @@ export const ProjectsData = [
 export const ProjectDetailsData = [
   {
     id: 1,
+    title: 'FarmSAV',
+    description: `FarmSAV is an internal SaaS platform designed to streamline customer support (SAV) operations within the company. It centralizes ticket management, improves communication workflows, and provides clear visibility into support activity.
+
+    The application allows teams to manage incoming requests efficiently through a structured ticketing system with status tracking (assigned, unassigned, closed, archived). It integrates an email-based workflow, enabling seamless communication with clients directly from the platform.
+    
+    FarmSAV also includes client and organization management, offering full control over contact data, as well as a reporting section with data visualizations to monitor ticket progression and overall performance. An admin panel provides advanced configuration capabilities, while user profile management ensures a personalized experience.
+    
+    Built with a focus on usability, performance, and scalability, the platform supports daily operations and enhances collaboration across teams.`,
+    image: image5,
+    features: [
+      'Full lifecycle management of support tickets',
+      'Real-time tracking of ticket status and activity',
+      'Integrated email communication with clients',
+      'Centralized dashboard with key support metrics',
+      'Client and organization data management',
+      'Reporting tools with ticket performance insights',
+      'Advanced admin configuration and system control',
+      'User account and profile management',
+      'Secure access and data handling'
+    ],
+    technos: {
+      frontend: [
+        'Next.js',
+        'Tailwind CSS',
+        'TanStack React Router',
+        'TanStack React Query',
+        'Zod',
+        'React-hook-form',
+        'Axios',
+        'GitLab CI/CD',
+        'Supabase'
+      ]
+    }
+  },
+  {
+    id: 2,
     title: 'FarmPilot',
     description:
       'FarmPilot is an internal SaaS developed in a professional environment for an agricultural cooperative, designed to centralize contract and farm management. The platform enables tracking of harvest data (quantities, tonnage), management of crop species per exploitation, and visualization of soil mapping. It also supports collaboration across multiple business teams through advanced user role management. Built to handle complex domain requirements, the application delivers a secure, performant, and productivity-focused user experience.',
@@ -109,7 +160,7 @@ export const ProjectDetailsData = [
     }
   },
   {
-    id: 2,
+    id: 3,
     title: 'PlannTrip',
     description:
       'PlannTrip is a modern web application designed for travel planning, allowing users to organize trips, manage participants, schedule activities, and share useful resources. The application includes a complete authentication system, protected routes, and a responsive interface, delivering a smooth, performant, and collaboration-oriented user experience.',
@@ -153,7 +204,7 @@ export const ProjectDetailsData = [
     demo: 'https://planntrip.netlify.app/'
   },
   {
-    id: 3,
+    id: 4,
     title: 'Feedback Widget',
     description:
       'The project is called Feedback Widget. It is a tool where the user can leave feedback in case of a problem, an idea or other, this tool allows the user to describe his problem/idea/other along with the screenshot functionality.',
@@ -180,7 +231,7 @@ export const ProjectDetailsData = [
     demo: 'https://feedback-widget-xi-snowy.vercel.app/'
   },
   {
-    id: 4,
+    id: 5,
     title: 'eSports',
     description:
       'The project is called Find your Duo. It is a platform to find the perfect partner to play your favorite game together.',

@@ -13,7 +13,6 @@ function ProjectCardWrapper({
   id,
   title,
   image,
-  className,
   github_link,
   demo,
   technos
@@ -49,7 +48,7 @@ function ProjectCardWrapper({
           alt={title as string}
           fill
           sizes="(min-width: 1536px) 26rem, (min-width: 768px) 39rem, 22rem"
-          className={`${className ?? 'object-contain'} w-full h-full`}
+          className="object-cover w-full h-full"
         />
       </div>
 

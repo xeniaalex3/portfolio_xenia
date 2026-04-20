@@ -1,7 +1,7 @@
 import image2 from '@/assets/image/plannTrip.png'
 import image3 from '@/assets/image/feedback1.png'
 import image4 from '@/assets/image/esports.png'
-import image1 from '@/assets/image/FarmPilot_dashboard.png'
+import image1 from '@/assets/image/farmpilot_present.png'
 
 export const ProjectsData = [
   {
